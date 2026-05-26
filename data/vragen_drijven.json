@@ -1,0 +1,334 @@
+{
+  "vak": "NLT",
+  "hoofdstuk": "4 - Drijven en Varen",
+  "scope": "4.1 t/m 4.13",
+  "totaal_vragen": 20,
+  "leerdoelen": [
+    {
+      "leerdoel_id": 1,
+      "leerdoel_titel": "Drijven en de wet van Archimedes",
+      "paragraaf": "4.3-4.4",
+      "uitleg_tekst": "Een boot drijft wanneer de opwaartse kracht gelijk is aan de zwaartekracht. Volgens de wet van Archimedes is de opwaartse kracht gelijk aan de zwaartekracht op het verplaatste water. Hieruit volgt: m_boot = m_verplaatst_water = ρ_water × V_onderwatervolume. Een grotere boot kan meer water verplaatsen en dus meer lading dragen. In zeewater (hogere dichtheid) ligt een boot minder diep dan in zoet water.",
+      "subdoelen": [
+        {
+          "subdoel_id": "1.1",
+          "subdoel_titel": "Wet van Archimedes en drijfvoorwaarde",
+          "uitleg_tekst": "De opwaartse kracht op een voorwerp in water is gelijk aan de zwaartekracht op het verplaatste water. Een boot drijft als de opwaartse kracht precies de zwaartekracht compenseert. De massa van de boot is dan gelijk aan de massa van het verplaatste water.",
+          "vragen": [
+            {
+              "id": 1,
+              "type": "multiple_choice",
+              "vraag": "Wat zegt de wet van Archimedes?",
+              "opties": [
+                "De opwaartse kracht op een voorwerp in water is gelijk aan de zwaartekracht op het verplaatste water",
+                "De opwaartse kracht is altijd groter dan de zwaartekracht op een boot",
+                "De opwaartse kracht hangt alleen af van de massa van het voorwerp",
+                "De opwaartse kracht is gelijk aan het gewicht van het voorwerp zelf"
+              ],
+              "juiste_antwoord": 0,
+              "uitleg": "De wet van Archimedes stelt dat de opwaartse kracht op een voorwerp in een vloeistof gelijk is aan de zwaartekracht op de verplaatste vloeistof. Het gaat dus om het verplaatste water, niet om het voorwerp zelf. De opwaartse kracht is niet altijd groter dan de zwaartekracht — als dat zo was, zou niets zinken."
+            },
+            {
+              "id": 2,
+              "type": "multiple_choice",
+              "vraag": "Een boot drijft in evenwicht. Welke uitspraak is dan correct?",
+              "opties": [
+                "De massa van de boot is groter dan de massa van het verplaatste water",
+                "De massa van de boot is gelijk aan de massa van het verplaatste water",
+                "De opwaartse kracht is groter dan de zwaartekracht op de boot",
+                "Het volume van de boot is gelijk aan het volume van het verplaatste water"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Bij drijfevenwicht geldt: opwaartse kracht = zwaartekracht. Omdat de opwaartse kracht gelijk is aan de zwaartekracht op het verplaatste water, betekent dit dat m_boot = m_verplaatst_water. Let op: het gaat om het onderwatervolume, niet het totale bootvolume."
+            },
+            {
+              "id": 3,
+              "type": "invullen",
+              "vraag": "De formule voor het onderwatervolume van een drijvende boot is: V_onderwatervolume = m_boot / ...",
+              "juiste_antwoord": "ρ_water",
+              "uitleg": "Uit m_boot = ρ_water × V_onderwatervolume volgt: V_onderwatervolume = m_boot / ρ_water. Hoe zwaarder de boot, hoe groter het onderwatervolume. Hoe dichter het water (bijv. zeewater), hoe kleiner het onderwatervolume bij dezelfde massa."
+            },
+            {
+              "id": 4,
+              "type": "multiple_choice",
+              "vraag": "Een vrachtschip vaart van de Noordzee (zout water) een rivier op (zoet water). Wat gebeurt er?",
+              "opties": [
+                "Het schip komt hoger te liggen, want zoet water is lichter",
+                "Het schip zakt dieper, want zoet water heeft een lagere dichtheid",
+                "Er verandert niets, want de massa van het schip blijft gelijk",
+                "Het schip zakt dieper, want zoet water heeft een hogere dichtheid"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Zoet water heeft een lagere dichtheid dan zout water (ρ_zoet ≈ 1000 kg/m³ vs. ρ_zout ≈ 1025 kg/m³). Omdat V = m_boot / ρ_water geldt: bij een lagere dichtheid moet het onderwatervolume groter zijn om dezelfde massa water te verplaatsen. Het schip zakt dus dieper in zoet water."
+            },
+            {
+              "id": 5,
+              "type": "choose_all_that_apply",
+              "vraag": "Welke factoren bepalen hoe diep een boot in het water ligt?",
+              "opties": [
+                "De massa van de boot",
+                "De dichtheid van het water",
+                "De kleur van de boot",
+                "De snelheid van de boot",
+                "De vorm van het onderwatergedeelte"
+              ],
+              "juiste_antwoorden": [0, 1],
+              "uitleg": "Het onderwatervolume wordt bepaald door V = m_boot / ρ_water. Dus de massa van de boot en de dichtheid van het water zijn de bepalende factoren. De kleur heeft uiteraard geen invloed. De snelheid kan dynamisch wel effect hebben, maar voor statisch drijven is het niet relevant. De vorm bepaalt hoe het volume is verdeeld, maar niet hoeveel volume onder water zit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "leerdoel_id": 2,
+      "leerdoel_titel": "Stabiliteit van schepen",
+      "paragraaf": "4.11-4.12",
+      "uitleg_tekst": "De stabiliteit van een schip hangt af van de positie van het massamiddelpunt (aangrijpingspunt zwaartekracht) en het drukkingspunt (aangrijpingspunt opwaartse kracht, in het onderwatervolume). Bij slagzij kan het drukkingspunt verschuiven. Bij een vierkante kiel verschuift het drukkingspunt en richt de boot zich op (stabiel). Bij een ronde kiel verschuift het drukkingspunt nauwelijks en kiepert de boot verder (instabiel). Een catamaran is zeer stabiel door de grote verschuiving van het drukkingspunt.",
+      "subdoelen": [
+        {
+          "subdoel_id": "2.1",
+          "subdoel_titel": "Massamiddelpunt en drukkingspunt",
+          "uitleg_tekst": "Het massamiddelpunt is het centrum van de massa van het schip — hier grijpt de zwaartekracht aan. Het drukkingspunt is het centrum van het onderwatervolume — hier grijpt de opwaartse kracht aan. De onderlinge positie van deze twee punten bepaalt de stabiliteit.",
+          "vragen": [
+            {
+              "id": 6,
+              "type": "multiple_choice",
+              "vraag": "Wat is het drukkingspunt van een schip?",
+              "opties": [
+                "Het punt waar het schip het water raakt",
+                "Het aangrijpingspunt van de opwaartse kracht, in het centrum van het onderwatervolume",
+                "Het punt waar de zwaartekracht op het schip aangrijpt",
+                "Het diepste punt van de kiel"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Het drukkingspunt is het aangrijpingspunt van de opwaartse kracht. Het bevindt zich in het centrum van het onderwatervolume. Het massamiddelpunt (niet het drukkingspunt) is waar de zwaartekracht aangrijpt."
+            },
+            {
+              "id": 7,
+              "type": "invullen",
+              "vraag": "Het aangrijpingspunt van de zwaartekracht op een schip heet het ...",
+              "juiste_antwoord": "massamiddelpunt",
+              "uitleg": "Het massamiddelpunt (ook wel zwaartepunt) is het punt waar je de totale massa van het schip geconcentreerd kunt denken. Hier grijpt de zwaartekracht aan. Hoe lager het massamiddelpunt, hoe stabieler het schip."
+            }
+          ]
+        },
+        {
+          "subdoel_id": "2.2",
+          "subdoel_titel": "Kielvorm en stabiliteit",
+          "uitleg_tekst": "Een vierkante kiel (bakvorm) is stabiel: bij slagzij verschuift het drukkingspunt naar de lage kant, waardoor een herstellend koppel ontstaat. Een ronde kiel is instabiel: het drukkingspunt verschuift nauwelijks bij slagzij, dus de boot kiepert verder. Een catamaran is zeer stabiel doordat het drukkingspunt al bij kleine kanteling sterk verschuift.",
+          "vragen": [
+            {
+              "id": 8,
+              "type": "multiple_choice",
+              "vraag": "Waarom is een schip met een vierkante kiel (bakvorm) stabiel?",
+              "opties": [
+                "Omdat het massamiddelpunt bij slagzij naar het midden verschuift",
+                "Omdat het drukkingspunt bij slagzij verschuift en een herstellend koppel creëert",
+                "Omdat vierkante kielen altijd zwaarder zijn dan ronde kielen",
+                "Omdat het contactoppervlak met het water kleiner is"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Bij een vierkante kiel verandert het onderwatervolume sterk bij slagzij: aan de lage kant komt meer volume onder water. Daardoor verschuift het drukkingspunt (aangrijpingspunt opwaartse kracht) naar de lage kant. Dit creëert een koppel dat de boot terugduwt naar de rechtopstaande positie."
+            },
+            {
+              "id": 9,
+              "type": "multiple_choice",
+              "vraag": "Wedstrijdroeiboten hebben een ronde kiel en zijn daardoor instabiel. Hoe houden roeiers de boot in balans?",
+              "opties": [
+                "Door ballast in de kiel te plaatsen",
+                "Door hun lichaamsgewicht te verschuiven als tegenwicht",
+                "Door harder te roeien zodat de boot sneller gaat",
+                "Door het drukkingspunt te verlagen met extra gewicht"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Bij een ronde kiel verschuift het drukkingspunt nauwelijks bij slagzij. De boot is daarom instabiel. Roeiers moeten voortdurend hun lichaamsgewicht verschuiven om de boot in balans te houden. Dit is een bewuste keuze: de ronde kiel geeft minder weerstand, maar vereist vaardige roeiers."
+            },
+            {
+              "id": 10,
+              "type": "multiple_choice",
+              "vraag": "Waarom is een catamaran bijzonder stabiel?",
+              "opties": [
+                "Omdat een catamaran twee motoren heeft",
+                "Omdat het drukkingspunt al bij een kleine kanteling sterk verschuift richting de dalende romp",
+                "Omdat een catamaran lichter is dan een gewone boot",
+                "Omdat het massamiddelpunt heel hoog ligt"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Een catamaran heeft twee rompen. Als de boot kantelt, neemt de ene romp meer water op en de andere minder. Hierdoor verschuift het drukkingspunt al bij een kleine kanteling sterk richting de dalende kant. Dit levert een groot herstellend koppel op, waardoor catamarans uiterst stabiel zijn."
+            },
+            {
+              "id": 11,
+              "type": "choose_all_that_apply",
+              "vraag": "Welke scheepstypen of -vormen zijn stabiel?",
+              "opties": [
+                "Een bak (vierkante kiel)",
+                "Een wedstrijdroeiboot (ronde kiel)",
+                "Een catamaran",
+                "Een kano met ronde bodem"
+              ],
+              "juiste_antwoorden": [0, 2],
+              "uitleg": "Een bak (vierkante kiel) is stabiel omdat het drukkingspunt sterk verschuift bij slagzij. Een catamaran is zeer stabiel door de twee ver uit elkaar liggende rompen. Een wedstrijdroeiboot en een kano met ronde bodem zijn instabiel: het drukkingspunt verschuift nauwelijks bij kanteling."
+            },
+            {
+              "id": 12,
+              "type": "multiple_choice",
+              "vraag": "De Herald of Free Enterprise kapseisde in 1987. Wat was de oorzaak van het kapseizen?",
+              "opties": [
+                "De boot had een te ronde kiel",
+                "Water stroomde het autodek op, waardoor het massamiddelpunt verschoof en de boot instabiel werd",
+                "De boot was te licht beladen",
+                "De motor viel uit bij hoge golven"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "De Herald of Free Enterprise kapseisde doordat de boegdeuren open bleven staan, waardoor water het autodek op stroomde. Dit grote gewicht aan water hoog in het schip verschoof het massamiddelpunt omhoog en opzij, waardoor het schip instabiel werd en omsloeg. Dit is een klassiek voorbeeld van hoe vrij bewegend water de stabiliteit kan vernietigen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "leerdoel_id": 3,
+      "leerdoel_titel": "Stromingsweerstand",
+      "paragraaf": "4.5-4.10",
+      "uitleg_tekst": "Een schip ondervindt weerstand door zijn afmetingen (boegvorm, dwarsdoorsnede) en door wrijving. De wrijvingskracht wordt berekend met F_wr = ½ρ·A·C·v², waarbij A het contactoppervlak is, C de wrijvingscoëfficiënt en v de snelheid. Daarnaast heeft elk schip een rompsnelheid: v_romp = 4,54 × √(L_wl). Golven (boeggolf, hekgolf, dwarsgolven) kosten ook energie. De ontwerpstrategie is: massa bepalen → maten bepalen → rompvorm ontwerpen.",
+      "subdoelen": [
+        {
+          "subdoel_id": "3.1",
+          "subdoel_titel": "Wrijvingsweerstand en de formule",
+          "uitleg_tekst": "De wrijvingskracht hangt af van het contactoppervlak (A), de wrijvingscoëfficiënt (C), de dichtheid van het water (ρ) en het kwadraat van de snelheid (v²). Als de snelheid verdubbelt, wordt de wrijving vier keer zo groot. Een glad oppervlak vermindert wrijving, maar soms kan een speciaal ruw oppervlak (haaienhuid) juist beter werken.",
+          "vragen": [
+            {
+              "id": 13,
+              "type": "multiple_choice",
+              "vraag": "Als een boot twee keer zo snel vaart, hoe verandert de wrijvingsweerstand?",
+              "opties": [
+                "De wrijving wordt twee keer zo groot",
+                "De wrijving wordt vier keer zo groot",
+                "De wrijving wordt acht keer zo groot",
+                "De wrijving blijft gelijk"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "In de formule F_wr = ½ρ·A·C·v² staat de snelheid in het kwadraat. Als v twee keer zo groot wordt, wordt v² vier keer zo groot. De wrijvingsweerstand wordt dus vier keer zo groot. Dit is waarom hoge snelheden enorm veel extra energie kosten."
+            },
+            {
+              "id": 14,
+              "type": "choose_all_that_apply",
+              "vraag": "Welke factoren vergroten de wrijvingsweerstand van een schip?",
+              "opties": [
+                "Groter contactoppervlak met het water",
+                "Hogere vaarsnelheid",
+                "Ruwer oppervlak (hogere wrijvingscoëfficiënt)",
+                "Een langere boot",
+                "Hogere dichtheid van het water"
+              ],
+              "juiste_antwoorden": [0, 1, 2, 4],
+              "uitleg": "Volgens F_wr = ½ρ·A·C·v² vergroten een groter contactoppervlak (A), hogere snelheid (v), hogere wrijvingscoëfficiënt (C, ruwer oppervlak) en hogere dichtheid (ρ) allemaal de wrijvingsweerstand. De lengte van de boot zit niet direct in de wrijvingsformule — die is relevant voor de rompsnelheid, maar niet per se voor de wrijvingskracht zelf."
+            },
+            {
+              "id": 15,
+              "type": "invullen",
+              "vraag": "De formule voor de wrijvingskracht is: F_wr = ½ρ · A · C · ...",
+              "juiste_antwoord": "v²",
+              "uitleg": "De wrijvingskracht hangt kwadratisch af van de snelheid. De volledige formule is F_wr = ½ρ·A·C·v². Het kwadraat van de snelheid maakt dat weerstand bij hogere snelheden explosief toeneemt."
+            }
+          ]
+        },
+        {
+          "subdoel_id": "3.2",
+          "subdoel_titel": "Rompsnelheid en golfweerstand",
+          "uitleg_tekst": "Elk waterverplaatsend schip heeft een maximale rompsnelheid, berekend met v_romp = 4,54 × √(L_wl), waarbij L_wl de waterlijnlengte in meters is. Sneller varen dan de rompsnelheid kost extreem veel energie. Golven (boeggolf, hekgolf, dwarsgolven) kosten energie en vormen een belangrijk deel van de weerstand.",
+          "vragen": [
+            {
+              "id": 16,
+              "type": "multiple_choice",
+              "vraag": "Twee schepen hebben dezelfde massa. Schip A heeft een waterlijnlengte van 4 meter, schip B van 16 meter. Hoe verhouden hun rompsnelheden zich?",
+              "opties": [
+                "Schip B heeft een 4× hogere rompsnelheid",
+                "Schip B heeft een 2× hogere rompsnelheid",
+                "Beide schepen hebben dezelfde rompsnelheid",
+                "Schip A heeft een hogere rompsnelheid"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "De rompsnelheid is v_romp = 4,54 × √(L_wl). Schip A: 4,54 × √4 = 4,54 × 2 = 9,08 km/h. Schip B: 4,54 × √16 = 4,54 × 4 = 18,16 km/h. Schip B gaat dus 2× zo snel, want √16 / √4 = 4/2 = 2. De wortel zorgt ervoor dat een 4× langere boot slechts 2× sneller kan."
+            },
+            {
+              "id": 17,
+              "type": "volgorde",
+              "vraag": "Zet de stappen van het ontwerpen van een scheepsromp in de juiste volgorde.",
+              "opties": {
+                "A": "Rompvorm ontwerpen (boeg, dwarsdoorsnede, gladheid, romplengte)",
+                "B": "Massa van het schip bepalen",
+                "C": "De maten van het schip bepalen op basis van de massa",
+                "D": "Weerstandsberekeningen uitvoeren"
+              },
+              "juiste_antwoord": "1:B, 2:C, 3:A, 4:D",
+              "uitleg": "De ontwerpstrategie is: eerst de massa bepalen (hoeveel moet het schip dragen?), dan de maten bepalen (welke afmetingen zijn nodig?), dan de rompvorm ontwerpen (hoe minimaliseer je weerstand?), en tot slot weerstandsberekeningen uitvoeren om het ontwerp te toetsen."
+            }
+          ]
+        },
+        {
+          "subdoel_id": "3.3",
+          "subdoel_titel": "Vormen van weerstand verminderen",
+          "uitleg_tekst": "Weerstand verminderen kan door: de boeg zo scherp mogelijk te maken, de dwarsdoorsnede zo klein mogelijk te houden, het oppervlak glad te maken, en de boot langer te maken (hogere rompsnelheid). Soms kan een speciaal oppervlak (haaienhuidstructuur) beter werken dan een volledig glad oppervlak.",
+          "vragen": [
+            {
+              "id": 18,
+              "type": "choose_all_that_apply",
+              "vraag": "Welke maatregelen verminderen de stromingsweerstand van een schip?",
+              "opties": [
+                "De boeg scherper maken",
+                "De dwarsdoorsnede vergroten",
+                "Het onderwateroppervlak glad houden",
+                "De boot langer maken",
+                "Het schip zwaarder maken"
+              ],
+              "juiste_antwoorden": [0, 2, 3],
+              "uitleg": "Een scherpere boeg vermindert de vormweerstand. Een glad oppervlak verlaagt de wrijvingscoëfficiënt. Een langere boot heeft een hogere rompsnelheid. Een grotere dwarsdoorsnede vergroot juist de weerstand. Een zwaarder schip ligt dieper en heeft meer contactoppervlak, wat de weerstand vergroot."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "leerdoel_id": 4,
+      "leerdoel_titel": "Problemen herkennen en experts identificeren",
+      "paragraaf": "4.13",
+      "uitleg_tekst": "Als niet-expert moet je kunnen herkennen of een probleem gaat over drijfvermogen, stabiliteit of stromingsweerstand, en weten welke expert je moet raadplegen. Expert B is de specialist in Drijven & Varen. Je hoeft het probleem niet zelf op te lossen, maar moet het juist classificeren.",
+      "subdoelen": [
+        {
+          "subdoel_id": "4.1",
+          "subdoel_titel": "Problemen classificeren",
+          "uitleg_tekst": "Een probleem over drijfvermogen gaat over of iets drijft of zinkt, en hoe diep het ligt. Een stabiliteitsprobleem gaat over omslaan, kapseizen of kantelen. Een stromingsprobleem gaat over snelheid, weerstand en energieverbruik. Herken het type probleem om de juiste expert te raadplegen.",
+          "vragen": [
+            {
+              "id": 19,
+              "type": "multiple_choice",
+              "vraag": "Een ontwerper constateert dat zijn schip te veel brandstof verbruikt bij hoge snelheid. Over welk type probleem gaat dit?",
+              "opties": [
+                "Een drijfvermogenprobleem",
+                "Een stabiliteitsprobleem",
+                "Een stromingsweerstandprobleem",
+                "Een constructieprobleem"
+              ],
+              "juiste_antwoord": 2,
+              "uitleg": "Hoog brandstofverbruik bij hoge snelheid wijst op te veel stromingsweerstand. De motor moet harder werken om de weerstand te overwinnen. Dit is een stromingsprobleem — de oplossing zit in de rompvorm, het oppervlak of de afmetingen van het schip. Expert B (Drijven & Varen) kan hierbij helpen."
+            },
+            {
+              "id": 20,
+              "type": "volgorde",
+              "vraag": "Koppel elk probleem aan het juiste expertisegebied. 1: 'Het schip slaat om bij harde wind.' 2: 'Het schip ligt te diep in het water.' 3: 'Het schip haalt zijn topsnelheid niet.' 4: 'Bij belading met containers kantelt het schip naar één kant.'",
+              "opties": {
+                "A": "Drijfvermogen (Archimedes)",
+                "B": "Stromingsweerstand",
+                "C": "Stabiliteit",
+                "D": "Stabiliteit"
+              },
+              "juiste_antwoord": "1:C, 2:A, 3:B, 4:D",
+              "uitleg": "Omslaan bij wind = stabiliteitsprobleem (C). Te diep liggen = drijfvermogen, het schip is te zwaar of het waterverplaatsend volume is te klein (A). Topsnelheid niet halen = stromingsweerstandprobleem, de rompvorm veroorzaakt te veel weerstand (B). Kantelen bij belading = stabiliteitsprobleem, de lading verschuift het massamiddelpunt (D)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

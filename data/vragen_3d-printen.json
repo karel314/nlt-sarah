@@ -1,0 +1,712 @@
+{
+  "vak": "NLT",
+  "hoofdstuk": "5 - 3D-ontwerpen en -printen",
+  "scope": "5.1 t/m 5.16",
+  "totaal_vragen": 45,
+  "leerdoelen": [
+    {
+      "leerdoel_id": 1,
+      "leerdoel_titel": "Het 3D-printproces (4 fasen)",
+      "paragraaf": "5.2",
+      "uitleg_tekst": "Het 3D-printproces bestaat uit vier fasen: (1) Ontwerpen — een digitaal 3D-model maken in CAD-software en exporteren als STL/DAE/OBJ, (2) Controle en gereed maken — mesh repareren, slicen naar G-CODE, brim/raft/scaffold toevoegen, (3) Printen — printer voorbereiden (schoonmaken, opwarmen, plakband), printopdracht geven via USB/wifi/geheugenkaart, (4) Afwerken — raft/scaffold verwijderen, schuren, polijsten, eventueel oplosmiddel gebruiken.",
+      "subdoelen": [
+        {
+          "subdoel_id": "1.1",
+          "subdoel_titel": "De vier fasen in volgorde",
+          "uitleg_tekst": "De vier fasen van het 3D-printproces zijn altijd in dezelfde volgorde: Ontwerpen → Controle en gereed maken → Printen → Afwerken. Elke fase heeft specifieke taken die correct uitgevoerd moeten worden voordat de volgende fase kan beginnen.",
+          "vragen": [
+            {
+              "id": 1,
+              "type": "volgorde",
+              "vraag": "Zet de vier fasen van het 3D-printproces in de juiste volgorde.",
+              "opties": {
+                "A": "Afwerken",
+                "B": "Controle en gereed maken",
+                "C": "Printen",
+                "D": "Ontwerpen"
+              },
+              "juiste_antwoord": "1:D, 2:B, 3:C, 4:A",
+              "uitleg": "Het 3D-printproces begint altijd met Ontwerpen (digitaal model maken), gevolgd door Controle en gereed maken (slicen, mesh repareren), dan Printen (de printer het werk laten doen) en tot slot Afwerken (support verwijderen, schuren, etc.)."
+            },
+            {
+              "id": 2,
+              "type": "multiple_choice",
+              "vraag": "In welke fase van het 3D-printproces wordt het digitale model omgezet naar G-CODE?",
+              "opties": [
+                "Ontwerpen",
+                "Controle en gereed maken",
+                "Printen",
+                "Afwerken"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Het slicen — het omzetten van een 3D-model naar G-CODE — gebeurt in fase 2: Controle en gereed maken. In deze fase wordt het model ook gecontroleerd op fouten, worden meshes gerepareerd en worden instellingen als brim, raft en scaffold toegevoegd."
+            },
+            {
+              "id": 3,
+              "type": "multiple_choice",
+              "vraag": "Op welke manieren kan een printopdracht naar de 3D-printer worden verstuurd?",
+              "opties": [
+                "Alleen via USB-kabel",
+                "Via USB, wifi of geheugenkaart",
+                "Alleen via wifi en Bluetooth",
+                "Alleen via een geheugenkaart"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Een printopdracht (G-CODE bestand) kan op drie manieren naar de printer gestuurd worden: via een USB-kabel, via wifi, of via een geheugenkaart (SD-kaart). De beschikbare opties hangen af van het printermodel."
+            }
+          ]
+        },
+        {
+          "subdoel_id": "1.2",
+          "subdoel_titel": "Activiteiten per fase",
+          "uitleg_tekst": "Elke fase heeft specifieke activiteiten. Fase 1: modelleren in CAD, exporteren als STL/DAE/OBJ. Fase 2: mesh repareren, slicen, support/brim/raft instellen. Fase 3: platform schoonmaken, opwarmen, plakband aanbrengen, G-CODE laden. Fase 4: scaffold/raft verwijderen, schuren, polijsten, eventueel oplosmiddel.",
+          "vragen": [
+            {
+              "id": 4,
+              "type": "choose_all_that_apply",
+              "vraag": "Welke activiteiten horen bij fase 2 'Controle en gereed maken'?",
+              "opties": [
+                "Mesh-reparatie uitvoeren",
+                "Het 3D-model ontwerpen in CAD",
+                "Slicen naar G-CODE",
+                "Brim, raft of scaffold toevoegen",
+                "Het printplatform schoonmaken"
+              ],
+              "juiste_antwoorden": [0, 2, 3],
+              "uitleg": "Fase 2 omvat mesh-reparatie, slicen naar G-CODE en het toevoegen van brim/raft/scaffold. Het ontwerpen in CAD hoort bij fase 1 (Ontwerpen) en het schoonmaken van het platform hoort bij fase 3 (Printen)."
+            },
+            {
+              "id": 5,
+              "type": "multiple_choice",
+              "vraag": "Wat doe je NIET tijdens de fase 'Printen'?",
+              "opties": [
+                "Het printplatform schoonmaken",
+                "De printer opwarmen",
+                "Plakband aanbrengen op het platform",
+                "Het 3D-model slicen naar G-CODE"
+              ],
+              "juiste_antwoord": 3,
+              "uitleg": "Slicen hoort bij fase 2 (Controle en gereed maken). Tijdens de fase Printen bereid je de printer voor: platform schoonmaken, printer opwarmen en eventueel plakband aanbrengen voor betere hechting."
+            },
+            {
+              "id": 6,
+              "type": "choose_all_that_apply",
+              "vraag": "Welke activiteiten horen bij fase 4 'Afwerken'?",
+              "opties": [
+                "Raft of scaffold verwijderen",
+                "Schuren en polijsten",
+                "Oplosmiddel gebruiken",
+                "De printer opwarmen",
+                "Het model exporteren als STL"
+              ],
+              "juiste_antwoorden": [0, 1, 2],
+              "uitleg": "Bij het afwerken verwijder je ondersteuningsstructuren (raft/scaffold), schuur en polijst je het oppervlak en kun je eventueel oplosmiddel gebruiken (bijv. aceton voor ABS). Opwarmen hoort bij fase 3 en exporteren bij fase 1."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "leerdoel_id": 2,
+      "leerdoel_titel": "Materialen en bestandsformaten",
+      "paragraaf": "5.3-5.4",
+      "uitleg_tekst": "De twee meestgebruikte 3D-printmaterialen zijn PLA (polylactic acid, bioplastic gemaakt van polymeer van melkzuur) en ABS (acrylonitril-butadieen-styreen, gemaakt van aardolie). Beide zijn thermoplasten: ze vervormen bij verwarming. 3D-modellen worden opgeslagen als STL, DAE of OBJ. De slicer maakt hier G-CODE van, de instructietaal voor de printer.",
+      "subdoelen": [
+        {
+          "subdoel_id": "2.1",
+          "subdoel_titel": "PLA en ABS",
+          "uitleg_tekst": "PLA = polylactic acid, een bioplastic en polymeer van melkzuur. ABS = acrylonitril-butadieen-styreen, een aardolieproduct. Beide zijn thermoplasten, wat betekent dat ze zacht worden bij verwarming en weer hard bij afkoeling.",
+          "vragen": [
+            {
+              "id": 7,
+              "type": "invullen",
+              "vraag": "PLA staat voor ...",
+              "juiste_antwoord": "polylactic acid",
+              "uitleg": "PLA staat voor polylactic acid (polymelkzuur). Het is een bioplastic dat gemaakt wordt uit polymeren van melkzuur. PLA is biologisch afbreekbaar en een thermoplast."
+            },
+            {
+              "id": 8,
+              "type": "multiple_choice",
+              "vraag": "Wat is het belangrijkste verschil in herkomst tussen PLA en ABS?",
+              "opties": [
+                "PLA is een bioplastic, ABS is een aardolieproduct",
+                "PLA is synthetisch, ABS is biologisch",
+                "PLA komt uit aardolie, ABS uit planten",
+                "Er is geen verschil, beide komen uit aardolie"
+              ],
+              "juiste_antwoord": 0,
+              "uitleg": "PLA (polylactic acid) is een bioplastic gemaakt van polymeer van melkzuur — het komt dus uit biologische grondstoffen. ABS (acrylonitril-butadieen-styreen) is een aardolieproduct en dus fossiel van oorsprong."
+            },
+            {
+              "id": 9,
+              "type": "invullen",
+              "vraag": "ABS staat voor ...",
+              "juiste_antwoord": "acrylonitril-butadieen-styreen",
+              "uitleg": "ABS staat voor acrylonitril-butadieen-styreen. Het is een thermoplast gemaakt uit aardolie. ABS is sterker en hittebestendiger dan PLA, maar lastiger om mee te printen."
+            },
+            {
+              "id": 10,
+              "type": "multiple_choice",
+              "vraag": "Wat hebben PLA en ABS gemeenschappelijk?",
+              "opties": [
+                "Beide zijn bioplastics",
+                "Beide zijn thermoplasten",
+                "Beide zijn gemaakt van aardolie",
+                "Beide hebben dezelfde printtemperatuur"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "PLA en ABS zijn beide thermoplasten: ze worden zacht en vervormbaar bij verwarming en worden weer hard bij afkoeling. Ze verschillen wel in herkomst (bio vs. aardolie) en printtemperatuur (PLA: 190-250°C, ABS: 210-270°C)."
+            }
+          ]
+        },
+        {
+          "subdoel_id": "2.2",
+          "subdoel_titel": "Bestandsformaten en software",
+          "uitleg_tekst": "3D-modellen worden opgeslagen in formaten zoals STL, DAE en OBJ. De slicer-software zet deze om naar G-CODE, de instructietaal die de 3D-printer begrijpt. Bekende CAD-programma's zijn TinkerCAD (gratis, web-based), Blender, SketchUp, OpenSCAD en 123D Design.",
+          "vragen": [
+            {
+              "id": 11,
+              "type": "choose_all_that_apply",
+              "vraag": "Welke bestandsformaten worden gebruikt voor 3D-modellen (niet voor printerinstructies)?",
+              "opties": [
+                "STL",
+                "G-CODE",
+                "DAE",
+                "OBJ",
+                "PDF"
+              ],
+              "juiste_antwoorden": [0, 2, 3],
+              "uitleg": "STL, DAE en OBJ zijn bestandsformaten voor 3D-modellen. G-CODE is het formaat voor printerinstructies (gemaakt door de slicer). PDF is een documentformaat en wordt niet gebruikt voor 3D-modellen."
+            },
+            {
+              "id": 12,
+              "type": "multiple_choice",
+              "vraag": "Wat is de functie van een slicer in het 3D-printproces?",
+              "opties": [
+                "Het ontwerpen van 3D-modellen",
+                "Het repareren van beschadigd filament",
+                "Het omzetten van een 3D-model naar G-CODE",
+                "Het afwerken van een geprinte object"
+              ],
+              "juiste_antwoord": 2,
+              "uitleg": "Een slicer snijdt het 3D-model in dunne horizontale laagjes en genereert G-CODE: de instructies die de printer vertellen hoe elke laag geprint moet worden (temperatuur, snelheid, pad van de printkop, etc.)."
+            },
+            {
+              "id": 13,
+              "type": "choose_all_that_apply",
+              "vraag": "Welke programma's zijn geschikt om 3D-modellen te ontwerpen?",
+              "opties": [
+                "TinkerCAD",
+                "Blender",
+                "Microsoft Word",
+                "SketchUp",
+                "OpenSCAD"
+              ],
+              "juiste_antwoorden": [0, 1, 3, 4],
+              "uitleg": "TinkerCAD, Blender, SketchUp en OpenSCAD zijn allemaal CAD-programma's waarmee je 3D-modellen kunt ontwerpen. Microsoft Word is een tekstverwerker en kan geen 3D-modellen maken."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "leerdoel_id": 3,
+      "leerdoel_titel": "TinkerCAD en ontwerpen",
+      "paragraaf": "5.5-5.6",
+      "uitleg_tekst": "TinkerCAD is een gratis, web-based CAD-programma (Computer Aided Design) met voorgeprogrammeerde vormen. Het basisprincipe is optellen en aftrekken van vormen: je combineert solide vormen en gaten (holes). Door een hole-vorm te groeperen met een solid-vorm wordt de overlap verwijderd. Je werkt op een workplane en gebruikt tools als align, group/ungroup, zoom en rotate.",
+      "subdoelen": [
+        {
+          "subdoel_id": "3.1",
+          "subdoel_titel": "TinkerCAD basisbegrippen",
+          "uitleg_tekst": "TinkerCAD is web-based (draait in de browser), gratis te gebruiken, en werkt met voorgeprogrammeerde vormen. CAD staat voor Computer Aided Design. Het basisprincipe is het optellen en aftrekken van vormen om complexe objecten te maken.",
+          "vragen": [
+            {
+              "id": 14,
+              "type": "invullen",
+              "vraag": "CAD staat voor ...",
+              "juiste_antwoord": "computer aided design",
+              "uitleg": "CAD staat voor Computer Aided Design (computerondersteund ontwerpen). TinkerCAD is een voorbeeld van CAD-software die speciaal gemaakt is voor beginners en web-based werkt."
+            },
+            {
+              "id": 15,
+              "type": "choose_all_that_apply",
+              "vraag": "Welke eigenschappen heeft TinkerCAD?",
+              "opties": [
+                "Web-based (draait in de browser)",
+                "Gratis te gebruiken",
+                "Werkt met voorgeprogrammeerde vormen",
+                "Vereist een krachtige grafische kaart",
+                "Moet geïnstalleerd worden op je computer"
+              ],
+              "juiste_antwoorden": [0, 1, 2],
+              "uitleg": "TinkerCAD is web-based (draait in de browser), gratis en werkt met voorgeprogrammeerde basisvormen. Omdat het in de browser draait, hoeft het niet geïnstalleerd te worden en is geen krachtige grafische kaart nodig."
+            }
+          ]
+        },
+        {
+          "subdoel_id": "3.2",
+          "subdoel_titel": "Solid, Hole en Groeperen",
+          "uitleg_tekst": "In TinkerCAD zijn vormen 'Solid' (massief) of 'Hole' (gat). Als je een hole-vorm groepeert met een solid-vorm, wordt het overlappende deel verwijderd — zo maak je uitsparingen en holle objecten. Align-tool: grijze stippen = uitgelijnd, zwarte stippen = niet uitgelijnd.",
+          "vragen": [
+            {
+              "id": 16,
+              "type": "multiple_choice",
+              "vraag": "Wat gebeurt er als je in TinkerCAD een 'Hole'-vorm groepeert met een 'Solid'-vorm?",
+              "opties": [
+                "De hole-vorm wordt onzichtbaar maar blijft bestaan",
+                "Beide vormen worden samengevoegd tot één groter object",
+                "Het overlappende deel van de solid-vorm wordt verwijderd",
+                "De solid-vorm verandert in een hole-vorm"
+              ],
+              "juiste_antwoord": 2,
+              "uitleg": "Wanneer je een Hole-vorm groepeert met een Solid-vorm, wordt het deel waar de hole overlapt met de solid verwijderd. Zo maak je gaten, uitsparingen en holle objecten. Dit is het principe van 'aftrekken van vormen' in TinkerCAD."
+            },
+            {
+              "id": 17,
+              "type": "multiple_choice",
+              "vraag": "Wat is het basisprincipe van ontwerpen in TinkerCAD?",
+              "opties": [
+                "Tekenen van 2D-lijnen die automatisch 3D worden",
+                "Optellen en aftrekken van vormen",
+                "Programmeren van coördinaten in code",
+                "Scannen van bestaande objecten"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "TinkerCAD werkt met het principe van optellen en aftrekken van vormen (constructive solid geometry). Je voegt solid-vormen samen (optellen) en maakt gaten door hole-vormen te groeperen met solids (aftrekken)."
+            },
+            {
+              "id": 18,
+              "type": "multiple_choice",
+              "vraag": "In TinkerCAD gebruik je de Align-tool om vormen uit te lijnen. Wat betekenen de grijze stippen?",
+              "opties": [
+                "De vormen zijn niet uitgelijnd op dat punt",
+                "De vormen zijn uitgelijnd op dat punt",
+                "De vormen zijn vergrendeld",
+                "De vormen kunnen niet verplaatst worden"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Bij de Align-tool in TinkerCAD geven grijze stippen aan dat de vormen op dat punt uitgelijnd zijn. Zwarte stippen betekenen dat de vormen op dat punt niet uitgelijnd zijn. Door op een zwart stip te klikken, worden de vormen op dat punt uitgelijnd."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "leerdoel_id": 4,
+      "leerdoel_titel": "Onderdelen en werking van de 3D-printer",
+      "paragraaf": "5.13",
+      "uitleg_tekst": "Een FDM 3D-printer heeft vele onderdelen die samen moeten werken: de printkop (hotend) smelt het filament, de transporteur duwt filament naar de printkop (bowden of direct drive), het platform biedt hechting, en koeling zorgt dat lagen stollen. Instellingen als laagdikte, temperatuur, printsnelheid, retraction, infill en platform-adhesie bepalen samen de printkwaliteit.",
+      "subdoelen": [
+        {
+          "subdoel_id": "4.1",
+          "subdoel_titel": "Printkop en transporteur",
+          "uitleg_tekst": "De printkop (hotend) smelt het filament. Te heet = risico op verbranding en verstopping; te koud = onvoldoende extrusie. De transporteur duwt filament naar de printkop. Er zijn twee types: bowden (filament via een buisje, zoals bij Ultimaker) en direct drive (transporteur op de printkop gemonteerd). Bowden-nadeel: geen elastisch materiaal mogelijk. Direct-drive-nadeel: printkop is zwaarder, moeilijker snel te verplaatsen.",
+          "vragen": [
+            {
+              "id": 19,
+              "type": "multiple_choice",
+              "vraag": "Wat is de functie van de hotend (printkop) in een 3D-printer?",
+              "opties": [
+                "Het filament opslaan",
+                "Het filament smelten zodat het door de spuitmond kan",
+                "Het filament afkoelen na het printen",
+                "Het filament snijden in stukjes"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "De hotend (printkop) verwarmt het filament tot het smeltpunt zodat het vloeibaar door de spuitmond (nozzle) kan worden geperst. De temperatuur moet precies goed zijn: te heet geeft verbranding en verstopping, te koud geeft onvoldoende extrusie."
+            },
+            {
+              "id": 20,
+              "type": "multiple_choice",
+              "vraag": "Wat is het verschil tussen een bowden-transporteur en een direct-drive-transporteur?",
+              "opties": [
+                "Bij bowden zit de transporteur op de printkop, bij direct drive niet",
+                "Bij bowden wordt filament via een buisje naar de printkop geleid, bij direct drive zit de transporteur op de printkop",
+                "Direct drive is altijd sneller dan bowden",
+                "Bowden kan wel elastisch materiaal printen, direct drive niet"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Bij een bowden-systeem (zoals Ultimaker) duwt de transporteur het filament via een buisje (bowdentube) naar de printkop. Bij direct drive is de transporteur direct op de printkop gemonteerd. Bowden-nadeel: geen elastisch materiaal mogelijk. Direct-drive-nadeel: printkop is zwaarder, waardoor snelle verplaatsingen moeilijker zijn."
+            },
+            {
+              "id": 21,
+              "type": "choose_all_that_apply",
+              "vraag": "Welke problemen kunnen ontstaan als de printkop te heet is ingesteld?",
+              "opties": [
+                "Verbranding van het filament",
+                "Verstopping van de spuitmond",
+                "Onderextrusie",
+                "Stringing (draadjes)",
+                "Het filament smelt niet"
+              ],
+              "juiste_antwoorden": [0, 1, 3],
+              "uitleg": "Als de printkop te heet is, kan het filament verbranden en de spuitmond verstoppen. Ook kan het te vloeibare plastic gaan 'stringeren' (draadjes trekken). Onderextrusie en niet-smelten zijn juist problemen die optreden als de temperatuur te laag is."
+            },
+            {
+              "id": 22,
+              "type": "multiple_choice",
+              "vraag": "Wat gebeurt er als het tandwiel van de transporteur slipt?",
+              "opties": [
+                "Het filament wordt sneller geëxtrudeerd",
+                "Het filament wordt afgevreten en bereikt de printkop niet goed",
+                "De printer stopt automatisch",
+                "Het printplatform wordt te heet"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Als de transporteur vastloopt (bijv. door een verstopping in de printkop), gaat het tandwiel slippen. Het tandwiel vreet dan het filament af, waardoor het filament beschadigt en niet meer goed naar de printkop getransporteerd wordt. Dit veroorzaakt extrusie-problemen."
+            }
+          ]
+        },
+        {
+          "subdoel_id": "4.2",
+          "subdoel_titel": "Laagdikte, temperatuur en snelheid",
+          "uitleg_tekst": "Laagdikte varieert van 0,06mm (zeer fijn) tot 0,3mm (grof); de standaard spuitmond is 0,4mm. Dunnere lagen = hogere resolutie maar langere printtijd. Printtemperatuur: PLA 190-250°C, ABS 210-270°C. Onderextrusie = te weinig plastic (open structuur), overextrusie = te veel plastic (druppels/verzakkingen). Printsnelheid in mm/sec: sneller → lagere kwaliteit tenzij temperatuur ook omhoog. Bij 190°C geven snelheden boven 150mm/sec gaten.",
+          "vragen": [
+            {
+              "id": 23,
+              "type": "multiple_choice",
+              "vraag": "Wat is de standaard diameter van een spuitmond (nozzle) bij de meeste 3D-printers?",
+              "opties": [
+                "0,2 mm",
+                "0,4 mm",
+                "0,6 mm",
+                "1,0 mm"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "De standaard spuitmonddiameter is 0,4 mm. De laagdikte kan variëren van 0,06 mm (zeer fijn, hoge resolutie) tot 0,3 mm (grof, sneller printen). De laagdikte is altijd kleiner dan de spuitmonddiameter."
+            },
+            {
+              "id": 24,
+              "type": "multiple_choice",
+              "vraag": "Wat is het gevolg van een dunnere laagdikte bij 3D-printen?",
+              "opties": [
+                "De print is sneller klaar",
+                "De print heeft een lagere resolutie",
+                "De print heeft een hogere resolutie maar duurt langer",
+                "De printer verbruikt minder materiaal"
+              ],
+              "juiste_antwoord": 2,
+              "uitleg": "Een dunnere laagdikte geeft een hogere resolutie (gladder oppervlak, meer detail), maar het object bestaat uit meer lagen waardoor het printen langer duurt. Het is altijd een afweging tussen kwaliteit en snelheid."
+            },
+            {
+              "id": 25,
+              "type": "multiple_choice",
+              "vraag": "Bij welk temperatuurbereik wordt PLA doorgaans geprint?",
+              "opties": [
+                "100-150°C",
+                "190-250°C",
+                "210-270°C",
+                "300-350°C"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "PLA wordt geprint bij 190-250°C. ABS heeft een hogere temperatuur nodig: 210-270°C. De exacte temperatuur hangt af van het merk filament, de printsnelheid en andere instellingen."
+            },
+            {
+              "id": 26,
+              "type": "multiple_choice",
+              "vraag": "Wat is onderextrusie?",
+              "opties": [
+                "Er komt te veel plastic uit de spuitmond, waardoor druppels ontstaan",
+                "Er komt te weinig plastic uit de spuitmond, waardoor een open structuur ontstaat",
+                "Het filament smelt niet en blijft vast in de spuitmond",
+                "De printer extrueert met te hoge snelheid"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Onderextrusie betekent dat er te weinig plastic uit de spuitmond komt. Dit veroorzaakt een open, poreuze structuur met gaten in het oppervlak. Oorzaken zijn o.a. te lage temperatuur, te hoge snelheid of te lage flow-instelling. Het tegenovergestelde (te veel plastic) heet overextrusie en geeft druppels en verzakkingen."
+            },
+            {
+              "id": 27,
+              "type": "invullen",
+              "vraag": "Printsnelheid wordt bij 3D-printen uitgedrukt in ...",
+              "juiste_antwoord": "mm/sec",
+              "uitleg": "Printsnelheid wordt uitgedrukt in mm/sec (millimeters per seconde). Een hogere snelheid verkort de printtijd, maar vereist ook een hogere temperatuur om voldoende plastic te smelten. Bij 190°C geven snelheden boven 150 mm/sec gaten in het oppervlak."
+            },
+            {
+              "id": 28,
+              "type": "multiple_choice",
+              "vraag": "Waarom moet de temperatuur omhoog als je de printsnelheid verhoogt?",
+              "opties": [
+                "Omdat het filament anders te snel afkoelt op het platform",
+                "Omdat er per tijdseenheid meer plastic gesmolten moet worden",
+                "Omdat de printer anders te veel lawaai maakt",
+                "Omdat de spuitmond anders verstopt raakt"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Bij hogere printsnelheid moet er per seconde meer plastic gesmolten en geëxtrudeerd worden. Als de temperatuur dan niet omhoog gaat, kan het filament niet snel genoeg smelten, wat leidt tot onderextrusie. Bij 190°C geven snelheden boven 150 mm/sec al gaten in het oppervlak."
+            }
+          ]
+        },
+        {
+          "subdoel_id": "4.3",
+          "subdoel_titel": "Retraction, koeling en bridging",
+          "uitleg_tekst": "Retraction = het terugtreken van filament om stringing (draadjes) te voorkomen wanneer de printkop verplaatst zonder te printen. Koeling via een ventilator is essentieel: plastic moet onder de glastransitietemperatuur afkoelen voordat de volgende laag gelegd wordt. Glastransitie PLA ~60°C, ABS ~105°C. Bridging = printen in de lucht over een opening; vereist goede afstemming van snelheid, temperatuur en koeling.",
+          "vragen": [
+            {
+              "id": 29,
+              "type": "multiple_choice",
+              "vraag": "Wat is 'retraction' bij 3D-printen?",
+              "opties": [
+                "Het verwarmen van het filament voor extrusie",
+                "Het terugtreken van filament om stringing te voorkomen",
+                "Het verwijderen van support na het printen",
+                "Het afkoelen van de print met een ventilator"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Retraction is het kort terugtreken van het filament door de transporteur wanneer de printkop zich verplaatst zonder te printen. Dit voorkomt dat er plastic uit de spuitmond lekt en draadjes (stringing) achterlaat op de print."
+            },
+            {
+              "id": 30,
+              "type": "invullen",
+              "vraag": "De glastransitietemperatuur van PLA is circa ... °C.",
+              "juiste_antwoord": "60",
+              "uitleg": "De glastransitietemperatuur van PLA is ongeveer 60°C. Onder deze temperatuur is het plastic hard en stijf. Elke geprinte laag PLA (geëxtrudeerd op ca. 220°C) moet afkoelen tot onder 60°C voordat de volgende laag erop gelegd kan worden, anders vervormt het."
+            },
+            {
+              "id": 31,
+              "type": "multiple_choice",
+              "vraag": "Waarom is koeling met een ventilator belangrijk bij het 3D-printen?",
+              "opties": [
+                "Om de motor van de printer koel te houden",
+                "Om te voorkomen dat het filament in de spoel smelt",
+                "Om elke laag onder de glastransitietemperatuur te laten afkoelen voordat de volgende laag erop komt",
+                "Om het printplatform af te koelen na het printen"
+              ],
+              "juiste_antwoord": 2,
+              "uitleg": "De ventilator koelt elke vers geprinte laag zodat het plastic onder de glastransitietemperatuur komt (PLA: ~60°C, ABS: ~105°C) voordat de volgende laag erop gelegd wordt. Als het plastic nog te zacht is, vervormt de laag onder het gewicht van de volgende laag."
+            },
+            {
+              "id": 32,
+              "type": "multiple_choice",
+              "vraag": "Wat is 'bridging' bij 3D-printen?",
+              "opties": [
+                "Het verbinden van twee losse objecten na het printen",
+                "Het printen in de lucht over een opening zonder support",
+                "Het gebruik van een brug-vormige scaffold",
+                "Het overbruggen van temperatuurverschillen in de printkop"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Bridging is het printen van een laag in de lucht over een opening, zonder steunmateriaal. Het plastic wordt als het ware 'gespannen' tussen twee punten. Dit vereist een goede afstemming van printsnelheid, temperatuur en koeling om doorhangen te voorkomen."
+            }
+          ]
+        },
+        {
+          "subdoel_id": "4.4",
+          "subdoel_titel": "Platform-adhesie en support",
+          "uitleg_tekst": "Platformhechting is cruciaal. Blauw schildersplakband werkt goed; maak het platform schoon met IPA of ethanol. Skirt = testlijn rondom het object. Brim = rand die vastzit aan het object voor betere hechting. Raft = extra eerste laag die het contactoppervlak vergroot. Scaffold/support = steunstructuur voor overhangende delen, na printen verwijderen met een mesje. Verwarmd platform: PLA ~60°C, ABS ~80°C (evt. met Kapton-plakband). Materiaal: glas of aluminium. Infill standaard 20%.",
+          "vragen": [
+            {
+              "id": 33,
+              "type": "volgorde",
+              "vraag": "Zet de platform-adhesietypes in volgorde van minste naar meeste hechting.",
+              "opties": {
+                "A": "Raft",
+                "B": "Skirt",
+                "C": "Brim"
+              },
+              "juiste_antwoord": "1:B, 2:C, 3:A",
+              "uitleg": "Een skirt is slechts een testlijn rondom het object (raakt het object niet) en biedt dus de minste hechting. Een brim is een rand die vastzit aan het object en vergroot het contactoppervlak. Een raft is een volledige eerste laag onder het object en biedt de meeste hechting."
+            },
+            {
+              "id": 34,
+              "type": "multiple_choice",
+              "vraag": "Wat is een 'scaffold' bij 3D-printen?",
+              "opties": [
+                "Een beschermlaag over het gehele object",
+                "Een steunstructuur voor overhangende delen die na het printen verwijderd wordt",
+                "Een extra sterke buitenlaag van het object",
+                "Een type filament dat zichzelf oplost"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Een scaffold (ook wel support genoemd) is een tijdelijke steunstructuur die geprint wordt onder overhangende delen van het object. Zonder scaffold zouden deze delen in de lucht geprint moeten worden en doorhangen. Na het printen wordt het scaffold met een scherp mesje verwijderd."
+            },
+            {
+              "id": 35,
+              "type": "multiple_choice",
+              "vraag": "Op welke temperatuur wordt een verwarmd platform ingesteld voor PLA?",
+              "opties": [
+                "Circa 30°C",
+                "Circa 60°C",
+                "Circa 80°C",
+                "Circa 120°C"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Voor PLA wordt het verwarmde platform ingesteld op circa 60°C (gelijk aan de glastransitietemperatuur). Voor ABS is dat circa 80°C, eventueel met Kapton-plakband voor extra hechting. Het platform is gemaakt van glas of aluminium."
+            },
+            {
+              "id": 36,
+              "type": "invullen",
+              "vraag": "De standaard infill-percentage bij 3D-printen is ... %.",
+              "juiste_antwoord": "20",
+              "uitleg": "Standaard wordt een infill van 20% gebruikt. Dit betekent dat het binnenste van het object voor 80% uit lucht bestaat. Dit bespaart materiaal en printtijd terwijl het object toch voldoende stevig is voor de meeste toepassingen."
+            },
+            {
+              "id": 37,
+              "type": "choose_all_that_apply",
+              "vraag": "Welke middelen kun je gebruiken om de hechting van de eerste laag aan het printplatform te verbeteren?",
+              "opties": [
+                "Blauw schildersplakband op het platform",
+                "Platform schoonmaken met IPA of ethanol",
+                "Een brim of raft toevoegen",
+                "Een verwarmd platform gebruiken",
+                "De printsnelheid verhogen"
+              ],
+              "juiste_antwoorden": [0, 1, 2, 3],
+              "uitleg": "Alle vier de eerste opties verbeteren de hechting: blauw plakband geeft een goed hechtoppervlak, IPA/ethanol verwijdert vet, brim/raft vergroten het contactoppervlak, en een verwarmd platform voorkomt te snelle afkoeling. De printsnelheid verhogen verslechtert juist de hechting doordat de eerste laag minder tijd heeft om te hechten."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "leerdoel_id": 5,
+      "leerdoel_titel": "Problemen oplossen",
+      "paragraaf": "5.14",
+      "uitleg_tekst": "Bij 3D-printen kunnen verschillende problemen optreden: onregelmatig oppervlak (stringing, ribbels, extrusie-issues), warping (kromtrekken, vaker bij ABS dan PLA), transporteurproblemen (tandwiel slipt) en meer. De systematische aanpak is: één parameter tegelijk veranderen, testen en herhalen (trial-and-error). Mogelijke oplossingen zijn temperatuur aanpassen, snelheid verlagen, flow aanpassen, platform-adhesie verbeteren, transporteur reinigen, of veer strakker zetten.",
+      "subdoelen": [
+        {
+          "subdoel_id": "5.1",
+          "subdoel_titel": "Oppervlakteproblemen en extrusie",
+          "uitleg_tekst": "Onregelmatig oppervlak kan komen door: stringing (draadjes door te weinig retraction), te grote laagdikte (zichtbare ribbels), te dunne wand, of extrusie-problemen. Bij onderextrusie: temperatuur +10°C verhogen, of snelheid omlaag, of flow vergroten.",
+          "vragen": [
+            {
+              "id": 38,
+              "type": "multiple_choice",
+              "vraag": "Je print vertoont een open, poreuze structuur met gaten. Wat is de meest waarschijnlijke oorzaak?",
+              "opties": [
+                "Overextrusie",
+                "Onderextrusie",
+                "Te veel koeling",
+                "Te dikke wanden"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Een open, poreuze structuur met gaten wijst op onderextrusie: er komt te weinig plastic uit de spuitmond. Oplossingen zijn: temperatuur met 10°C verhogen, printsnelheid verlagen, of de flow-instelling vergroten."
+            },
+            {
+              "id": 39,
+              "type": "choose_all_that_apply",
+              "vraag": "Welke oplossingen kunnen helpen bij onderextrusie?",
+              "opties": [
+                "Temperatuur met 10°C verhogen",
+                "Printsnelheid verlagen",
+                "Flow-instelling vergroten",
+                "Retraction uitschakelen",
+                "Laagdikte vergroten naar 1mm"
+              ],
+              "juiste_antwoorden": [0, 1, 2],
+              "uitleg": "Bij onderextrusie komt er te weinig plastic uit de spuitmond. Dit los je op door: (1) temperatuur +10°C zodat het plastic vloeibaarder wordt, (2) snelheid omlaag zodat het plastic meer tijd heeft om te smelten, of (3) flow vergroten zodat de transporteur meer filament aanduwt. Retraction uitschakelen helpt niet en een laagdikte van 1mm is onrealistisch (max is ca. 0,3mm)."
+            },
+            {
+              "id": 40,
+              "type": "multiple_choice",
+              "vraag": "Je ziet druppels en verzakkingen op het oppervlak van je print. Wat is waarschijnlijk het probleem?",
+              "opties": [
+                "Onderextrusie — er komt te weinig plastic uit",
+                "Overextrusie — er komt te veel plastic uit",
+                "Warping — het object trekt krom",
+                "Bridging — de printer print in de lucht"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "Druppels en verzakkingen zijn typische tekenen van overextrusie: er komt te veel plastic uit de spuitmond. Oplossingen zijn: temperatuur verlagen, flow-percentage verlagen, of printsnelheid verhogen."
+            }
+          ]
+        },
+        {
+          "subdoel_id": "5.2",
+          "subdoel_titel": "Warping en transporteurproblemen",
+          "uitleg_tekst": "Warping = kromtrekken van de print, komt vaker voor bij ABS dan bij PLA doordat ABS een grotere thermische uitzettingscoëfficiënt heeft. Oplossingen: betere platform-adhesie (plakband, brim, raft), langzamer printen, verwarmd platform. Bij transporteurproblemen slipt het tandwiel en wordt het filament afgevreten. Oplossingen: transporteur reinigen, veer strakker zetten.",
+          "vragen": [
+            {
+              "id": 41,
+              "type": "multiple_choice",
+              "vraag": "Waarom komt warping vaker voor bij ABS dan bij PLA?",
+              "opties": [
+                "Omdat ABS een hogere printtemperatuur nodig heeft en daardoor sneller afkoelt",
+                "Omdat ABS een grotere thermische uitzettingscoëfficiënt heeft",
+                "Omdat ABS lichter is dan PLA",
+                "Omdat ABS alleen met een bowden-transporteur geprint kan worden"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "ABS heeft een grotere thermische uitzettingscoëfficiënt dan PLA, wat betekent dat het meer krimpt bij afkoeling. Dit ongelijkmatige krimpen zorgt voor interne spanningen die de print doen kromtrekken (warping). Daarom is een verwarmd platform bij ABS nog belangrijker dan bij PLA."
+            },
+            {
+              "id": 42,
+              "type": "choose_all_that_apply",
+              "vraag": "Welke maatregelen helpen tegen warping?",
+              "opties": [
+                "Betere platform-adhesie (plakband, brim, raft)",
+                "Langzamer printen",
+                "Verwarmd platform gebruiken",
+                "Retraction verhogen",
+                "Infill verlagen naar 5%"
+              ],
+              "juiste_antwoorden": [0, 1, 2],
+              "uitleg": "Warping wordt bestreden door betere hechting aan het platform (plakband, brim, raft), langzamer printen (minder thermische spanning) en een verwarmd platform (geleidelijkere afkoeling). Retraction heeft te maken met stringing, niet met warping. Infill verlagen heeft weinig effect op warping."
+            },
+            {
+              "id": 43,
+              "type": "volgorde",
+              "vraag": "Zet de stappen voor het oplossen van een transporteurprobleem (tandwiel slipt) in de juiste volgorde.",
+              "opties": {
+                "A": "Test of het filament weer goed getransporteerd wordt",
+                "B": "Verwijder het afgevreten filament",
+                "C": "Reinig het tandwiel van de transporteur",
+                "D": "Zet de veer strakker als het probleem aanhoudt"
+              },
+              "juiste_antwoord": "1:B, 2:C, 3:D, 4:A",
+              "uitleg": "Eerst verwijder je het beschadigde (afgevreten) filament, want dat blokkeert de doorvoer. Daarna reinig je het tandwiel zodat het weer grip heeft. Als het tandwiel nog steeds slipt, zet je de veer strakker voor meer aandruk. Tot slot test je of alles weer goed werkt."
+            }
+          ]
+        },
+        {
+          "subdoel_id": "5.3",
+          "subdoel_titel": "Systematische aanpak",
+          "uitleg_tekst": "De systematische aanpak bij problemen oplossen is: één parameter tegelijk veranderen, testen, en herhalen. Dit heet trial-and-error. Door steeds maar één ding te veranderen, kun je precies vaststellen welke instelling het probleem veroorzaakt. Als je meerdere parameters tegelijk verandert, weet je niet welke aanpassing hielp.",
+          "vragen": [
+            {
+              "id": 44,
+              "type": "multiple_choice",
+              "vraag": "Je print heeft kwaliteitsproblemen en je wilt de oorzaak achterhalen. Wat is de beste aanpak?",
+              "opties": [
+                "Alle instellingen tegelijk aanpassen en opnieuw printen",
+                "Eén parameter tegelijk veranderen, testen en herhalen",
+                "Steeds een nieuw type filament proberen",
+                "De printer volledig uit elkaar halen en opnieuw opbouwen"
+              ],
+              "juiste_antwoord": 1,
+              "uitleg": "De systematische aanpak is: één parameter tegelijk veranderen, testen en herhalen (trial-and-error). Zo kun je precies vaststellen welke instelling het probleem veroorzaakt. Als je meerdere parameters tegelijk verandert, weet je niet welke aanpassing effect had."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "leerdoel_id": 6,
+      "leerdoel_titel": "Afwerken van 3D-prints",
+      "paragraaf": "5.13.13",
+      "uitleg_tekst": "Na het printen moet het object afgewerkt worden. Dit omvat het verwijderen van brim/raft/scaffold met een scherp mesje, schuren met fijne vijl of schuurpapier (niet alle materialen geschikt), chemische nabewerking (aceton voor ABS, coating), of hitte (soldeerbout ~300°C, boven smelttemperatuur). Een 3D-pen kan gebruikt worden voor kleine foutjes. Let op: sommige stoffen zijn brandbaar of giftig.",
+      "subdoelen": [
+        {
+          "subdoel_id": "6.1",
+          "subdoel_titel": "Methoden voor afwerking",
+          "uitleg_tekst": "Afwerkmethoden zijn: mechanisch (mesje, vijl, schuurpapier), chemisch (aceton voor ABS, coating), thermisch (soldeerbout ~300°C, föhn) en 3D-pen voor kleine reparaties. Veiligheid is belangrijk: sommige oplosmiddelen zijn brandbaar of giftig.",
+          "vragen": [
+            {
+              "id": 45,
+              "type": "choose_all_that_apply",
+              "vraag": "Welke methoden zijn geschikt voor het afwerken van een 3D-print?",
+              "opties": [
+                "Schuren met fijne vijl of schuurpapier",
+                "Aceton gebruiken (bij ABS)",
+                "Kleine foutjes repareren met een 3D-pen",
+                "Het object in de vaatwasser doen",
+                "Gladmaken met een soldeerbout (~300°C)"
+              ],
+              "juiste_antwoorden": [0, 1, 2, 4],
+              "uitleg": "Afwerken kan mechanisch (schuren), chemisch (aceton voor ABS), met een 3D-pen (kleine reparaties) of thermisch (soldeerbout op ~300°C, boven het smeltpunt). De vaatwasser is geen geschikte afwerkmethode en kan het object beschadigen, zeker PLA met een lage glastransitie van ~60°C."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

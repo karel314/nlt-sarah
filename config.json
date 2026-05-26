@@ -1,0 +1,188 @@
+{
+  "appId": "nlt-sarah",
+  "title": "NLT Sarah",
+  "shortName": "NLT Sarah",
+  "subtitle": "Kies een onderwerp",
+  "description": "NLT Van Idee naar 3D quiz voor Sarah — 3D-printen, Drijven & Varen, Zonne-electriciteit",
+  "studentName": "Sarah",
+  "greeting": "Hoi Sarah! Welk onderwerp wil je oefenen?",
+  "lang": "nl",
+  "storageKey": "(per-chapter, see chapters below)",
+  "multiChapter": true,
+  "theme": {
+    "primary": "#059669",
+    "light": "#34d399",
+    "dark": "#047857",
+    "bg": "#ecfdf5",
+    "bgAccent": "#ecfdf5"
+  },
+  "manifest": {
+    "name": "NLT Sarah - Quiz",
+    "short_name": "NLT Sarah",
+    "description": "NLT Van Idee naar 3D quiz voor Sarah",
+    "theme_color": "#059669",
+    "background_color": "#ecfdf5"
+  },
+  "themeColorMeta": "#059669",
+  "appleMobileWebAppTitle": "NLT Sarah",
+  "gridColumns": "1fr",
+  "chapters": {
+    "3D": {
+      "file": "data/vragen_3d-printen.json",
+      "title": "3D-printen",
+      "subtitle": "Expert",
+      "icon": "🖨️",
+      "storageKey": "nlt-sarah-3d-progress",
+      "badges": {
+        "1": { "name": "Printkopper", "emoji": "🔧" },
+        "2": { "name": "Filamentkenner", "emoji": "🧵" },
+        "3": { "name": "Slicemeester", "emoji": "🔪" },
+        "4": { "name": "TinkerCAD-pro", "emoji": "💻" },
+        "5": { "name": "Troubleshooter", "emoji": "🔍" },
+        "6": { "name": "3D-print expert", "emoji": "⭐" }
+      },
+      "correctMsgs": [
+        "Top, Sarah! Jij kent die printer als je broekzak!",
+        "Strak geprint! Dat antwoord zit als gegoten.",
+        "Je extrudeert kennis als een pro!",
+        "Beter dan een Ultimaker op volle snelheid!",
+        "Laagje voor laagje bouw je je kennis op!",
+        "Sarah, jij bent de 3D-print expert van je team!",
+        "Die printkop heeft geen geheimen meer voor jou!",
+        "Foutloos! Zelfs zonder scaffold sta je stevig.",
+        "Je kent de slicer-instellingen als geen ander!",
+        "PLA of ABS? Jij weet precies het verschil!",
+        "Die mesh is waterdicht, net als je kennis!",
+        "Sarah, je troubleshoot sneller dan de printer print!",
+        "G-CODE? Kinderspel voor jou!",
+        "Je bouwt je kennis op als een perfecte print!",
+        "Warping? Niet bij jouw antwoorden!"
+      ],
+      "wrongMsgs": [
+        "Even een verstopte nozzle in je kennis, Sarah!",
+        "Oeps! Die laag hechtte niet helemaal goed.",
+        "Een beetje stringing in je antwoord, maar we lossen het op!",
+        "Die print is even mislukt, maar de volgende wordt beter!",
+        "Even recalibreren, Sarah!",
+        "Warping in je antwoord, maar we herstellen dat!",
+        "Die mesh had een foutje, maar TinkerCAD repareert het!",
+        "Foutje! Maar zelfs experts moeten soms opnieuw printen.",
+        "Die extrusie was even niet goed, maar je leert snel!",
+        "Net niet goed, maar je bent bijna een echte expert!"
+      ],
+      "resultsMsgs": {
+        "perfect": ["Perfecte score! Jij bent DE 3D-print expert, Sarah!", "100%! De printer heeft geen geheimen meer voor jou!"],
+        "great": ["Uitstekend, Sarah! Je expert-kennis is bijna compleet!", "Geweldig! Nog een klein laagje kennis erbij en je scoort perfect."],
+        "good": ["Goed bezig! Je bent al een echte specialist aan het worden.", "Prima score, Sarah! Herhaal de rode vragen voor een 10."],
+        "okay": ["Een goede start! De 3D-printer is ook complex. Probeer de flashcards!", "Je bent op weg! Lees Deel III van hoofdstuk 5 nog eens goed door."],
+        "low": ["Niet getreurd! 3D-printen heeft veel details. Begin met de basis!", "Dit is je startpunt, Sarah. Gebruik de flashcards en probeer opnieuw!"]
+      }
+    },
+    "DV": {
+      "file": "data/vragen_drijven.json",
+      "title": "Drijven & Varen",
+      "subtitle": "Niet-expert",
+      "icon": "⛵",
+      "storageKey": "nlt-sarah-dv-progress",
+      "badges": {
+        "1": { "name": "Archimedeskenner", "emoji": "🛁" },
+        "2": { "name": "Stabiliteitspro", "emoji": "⚖️" },
+        "3": { "name": "Weerstandskenner", "emoji": "🌊" },
+        "4": { "name": "Bootontwerper", "emoji": "⛵" }
+      },
+      "correctMsgs": [
+        "Goed zo, Sarah! Archimedes zou trots zijn!",
+        "Je drijft bovenop deze stof!",
+        "Scherp als een boeg! Dat is correct.",
+        "Die opwaartse kracht duwt je richting een 10!",
+        "Sarah, je vaart door deze vragen heen!",
+        "Stabiel als een catamaran!",
+        "Je stromingskennis is helemaal laminair!",
+        "Die waterlijn zit perfect!",
+        "Je weet hoe een boot blijft drijven!",
+        "Vlot door het water, Sarah!"
+      ],
+      "wrongMsgs": [
+        "Even wat meer opwaartse kracht nodig, Sarah!",
+        "Die boot maakte even slagzij!",
+        "Oeps! Dat antwoord is even gezonken.",
+        "De weerstand was te groot voor dat antwoord!",
+        "Even terug naar de waterlijn, Sarah!",
+        "Die kiel moet even recht gezet worden!",
+        "Foutje! Maar je komt weer bovendrijven.",
+        "Net niet goed, maar de volgende golf is beter!"
+      ],
+      "resultsMsgs": {
+        "perfect": ["Perfecte score! Je vaart door Drijven & Varen, Sarah!", "100%! Archimedes zou je een medaille geven!"],
+        "great": ["Uitstekend, Sarah! Je kent de basis uitstekend!", "Geweldig! Nog een kleine golf en je scoort perfect."],
+        "good": ["Goed bezig! Je drijfvermogen voor kennis is groot.", "Prima score, Sarah! Herhaal de rode vragen."],
+        "okay": ["Een goede start! Lees paragraaf 4.4 en 4.12 nog eens.", "Je bent op weg! De theorie van Archimedes is de sleutel."],
+        "low": ["Niet getreurd! Begin met de wet van Archimedes.", "Dit is je startpunt. Gebruik de flashcards, Sarah!"]
+      }
+    },
+    "ZE": {
+      "file": "data/vragen_zonne.json",
+      "title": "Zonne-electriciteit",
+      "subtitle": "Niet-expert",
+      "icon": "☀️",
+      "storageKey": "nlt-sarah-ze-progress",
+      "badges": {
+        "1": { "name": "Spanningskenner", "emoji": "⚡" },
+        "2": { "name": "Paneelexpert", "emoji": "☀️" },
+        "3": { "name": "Circuitbouwer", "emoji": "🔌" },
+        "4": { "name": "Zonnestraler", "emoji": "🌞" }
+      },
+      "correctMsgs": [
+        "Stralend antwoord, Sarah!",
+        "Je zonne-kennis schijnt helder!",
+        "Die schakeling klopt perfect!",
+        "Maximum power point bereikt!",
+        "Sarah, je straalt als een zonnepaneel!",
+        "Die I-V curve beheers je goed!",
+        "Correct! Je spanning is op niveau.",
+        "Je kent de onderdelen als een echte technicus!",
+        "Zonnehelder! Dat is goed.",
+        "Je circuit is compleet en correct!"
+      ],
+      "wrongMsgs": [
+        "Even een wolkje voor je kennis, Sarah!",
+        "Die schakeling zit net niet goed.",
+        "Oeps! De spanning viel even weg.",
+        "Kortsluiting in je antwoord, maar we herstellen!",
+        "Even de bedrading controleren, Sarah!",
+        "Die PV-cel ving net niet genoeg licht.",
+        "Foutje! Maar de zon komt weer op.",
+        "Net niet goed, maar je leert snel!"
+      ],
+      "resultsMsgs": {
+        "perfect": ["Perfecte score! Je straalt helderder dan de zon, Sarah!", "100%! Je zonne-kennis is op maximum power!"],
+        "great": ["Uitstekend, Sarah! Je kent de basis van zonne-electriciteit!", "Geweldig! Nog even en je scoort perfect."],
+        "good": ["Goed bezig! Je paneelkennis wordt steeds beter.", "Prima score, Sarah! Herhaal de rode vragen."],
+        "okay": ["Een goede start! Lees paragraaf 6.4 nog eens goed.", "Je bent op weg! De onderdelen van het systeem zijn de sleutel."],
+        "low": ["Niet getreurd! Begin met de basisonderdelen.", "Dit is je startpunt. Gebruik de flashcards, Sarah!"]
+      }
+    }
+  },
+  "dataFiles": [
+    "data/vragen_3d-printen.json",
+    "data/vragen_drijven.json",
+    "data/vragen_zonne.json"
+  ],
+  "confettiColors": ["#059669", "#34d399", "#f59e0b", "#ec4899", "#3b82f6", "#22c55e"],
+  "uiStrings": {
+    "correct": "Goed!",
+    "wrong": "Helaas, fout!",
+    "next": "Volgende",
+    "seeResults": "Bekijk resultaten",
+    "stop": "Stoppen",
+    "confirmStop": "Wil je de quiz stoppen? Je voortgang wordt opgeslagen.",
+    "confirmReset": "Weet je zeker dat je alle voortgang voor dit onderwerp wilt wissen?",
+    "noProgress": "Begin met een quiz om je voortgang te zien!",
+    "typeLabels": {
+      "multiple_choice": "Meerkeuze",
+      "choose_all_that_apply": "Meerdere antwoorden",
+      "invullen": "Invullen",
+      "volgorde": "Volgorde"
+    }
+  }
+}

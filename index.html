@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#059669">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="NLT Sarah">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <title>NLT Sarah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HOME SCREEN -->
+  <div id="screen-home" class="screen active">
+    <div class="header">
+      <h1>NLT Sarah</h1>
+      <p class="subtitle">Kies een onderwerp</p>
+    </div>
+    <div class="greeting">Hoi Sarah! Welk onderwerp wil je oefenen?</div>
+    <div class="home-cards">
+      <button class="home-card card-quiz" onclick="showScreen('config')">
+        <span class="card-icon">&#x1F4DD;</span>
+        <span class="card-title">Quiz</span>
+        <span class="card-desc">Test je kennis</span>
+      </button>
+      <button class="home-card card-progress" onclick="showScreen('progress')">
+        <span class="card-icon">&#x1F4CA;</span>
+        <span class="card-title">Voortgang</span>
+        <span class="card-desc">Bekijk je scores</span>
+      </button>
+      <button class="home-card card-flash" onclick="startAllFlashcards()">
+        <span class="card-icon">&#x1F0CF;</span>
+        <span class="card-title">Alle Flashcards</span>
+        <span class="card-desc">Random volgorde</span>
+      </button>
+      <button class="home-card card-flash" onclick="startFlashcards()">
+        <span class="card-icon">&#x1F4A1;</span>
+        <span class="card-title">Zwakke topics</span>
+        <span class="card-desc">Herhaal wat je nog niet kent</span>
+      </button>
+    </div>
+    <div class="badge-shelf">
+      <h3>Badges</h3>
+      <div id="badge-shelf-list" class="badge-list"></div>
+    </div>
+    <div class="overall-stats" id="home-stats"></div>
+    <div class="version-label">v1.0</div>
+  </div>
+
+  <!-- QUIZ CONFIG SCREEN -->
+  <div id="screen-config" class="screen">
+    <div class="screen-top-bar">
+      <button class="btn-back" onclick="showScreen('home')">&larr; Terug</button>
+    </div>
+    <h2>Quiz instellen</h2>
+    <div class="config-section">
+      <label class="config-label">Aantal vragen</label>
+      <div class="btn-group" id="count-selector">
+        <button class="btn-option" data-count="5">5</button>
+        <button class="btn-option selected" data-count="10">10</button>
+        <button class="btn-option" data-count="15">15</button>
+      </div>
+    </div>
+    <div class="config-section">
+      <label class="config-label">Leerdoelen <span class="hint">(optioneel, anders alles)</span></label>
+      <div id="leerdoel-filter" class="leerdoel-checkboxes"></div>
+    </div>
+    <button class="btn-primary btn-start" onclick="startQuiz()">Start Quiz</button>
+  </div>
+
+  <!-- QUIZ SCREEN -->
+  <div id="screen-quiz" class="screen">
+    <div class="quiz-top-bar">
+      <div class="quiz-progress-text" id="quiz-progress-text">1 / 10</div>
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quiz-progress-fill"></div></div>
+      <button class="btn-exit" onclick="exitQuiz()">Stoppen</button>
+    </div>
+    <div class="quiz-leerdoel-badge" id="quiz-leerdoel-badge"></div>
+    <div class="question-card" id="question-card">
+      <div class="question-text" id="question-text"></div>
+      <div id="question-image-container"></div>
+      <div class="question-type-badge" id="question-type-badge"></div>
+      <div id="options-container"></div>
+    </div>
+    <div class="feedback-panel" id="feedback-panel" style="display:none;">
+      <div class="feedback-result" id="feedback-result"></div>
+      <div class="feedback-encouragement" id="feedback-encouragement"></div>
+      <div class="feedback-explanation" id="feedback-explanation"></div>
+      <button class="btn-primary btn-next" id="btn-next" onclick="nextQuestion()">Volgende</button>
+    </div>
+  </div>
+
+  <!-- RESULTS SCREEN -->
+  <div id="screen-results" class="screen">
+    <div class="screen-top-bar">
+      <button class="btn-back" onclick="showScreen('home')">&larr; Home</button>
+    </div>
+    <div class="results-header">
+      <div class="score-circle" id="score-circle">
+        <svg viewBox="0 0 120 120">
+          <circle class="score-bg" cx="60" cy="60" r="54"></circle>
+          <circle class="score-fg" id="score-fg" cx="60" cy="60" r="54"></circle>
+        </svg>
+        <div class="score-text" id="score-text">0%</div>
+      </div>
+      <div class="results-summary" id="results-summary"></div>
+    </div>
+    <div class="results-encouragement" id="results-encouragement"></div>
+    <div id="new-badges-container" style="display:none;">
+      <h3>Nieuwe badges!</h3>
+      <div id="new-badges-list" class="badge-celebration"></div>
+    </div>
+    <div class="results-breakdown">
+      <h3>Per leerdoel</h3>
+      <div id="results-leerdoel-breakdown"></div>
+    </div>
+    <div class="results-missed">
+      <h3>Gemiste vragen</h3>
+      <div id="results-missed-list"></div>
+    </div>
+    <div class="results-actions">
+      <button class="btn-primary" onclick="startQuiz()">Opnieuw</button>
+      <button class="btn-secondary" onclick="showScreen('home')">Home</button>
+    </div>
+  </div>
+
+  <!-- PROGRESS SCREEN -->
+  <div id="screen-progress" class="screen">
+    <div class="screen-top-bar">
+      <button class="btn-back" onclick="showScreen('home')">&larr; Terug</button>
+    </div>
+    <h2>Voortgang</h2>
+    <div class="overall-progress" id="overall-progress"></div>
+    <div id="leerdoel-progress-list"></div>
+    <div class="reset-section">
+      <button class="btn-danger" onclick="resetProgress()">Wis alle voortgang</button>
+    </div>
+  </div>
+
+  <!-- FLASHCARD SCREEN -->
+  <div id="screen-flashcards" class="screen">
+    <div class="screen-top-bar">
+      <button class="btn-back" onclick="showScreen('home')">&larr; Terug</button>
+      <span class="flash-counter" id="flash-counter"></span>
+    </div>
+    <h2>Flashcards</h2>
+    <p class="flash-hint" id="flash-hint">Tik op de kaart om het antwoord te zien</p>
+    <div class="flashcard-container" id="flashcard-container">
+      <div class="flashcard" id="flashcard" onclick="flipCard()">
+        <div class="flashcard-front" id="flashcard-front"></div>
+        <div class="flashcard-back" id="flashcard-back"></div>
+      </div>
+    </div>
+    <div class="flash-nav">
+      <button class="btn-secondary" id="btn-flash-prev" onclick="prevFlashcard()">&larr; Vorige</button>
+      <button class="btn-secondary" id="btn-flash-next" onclick="nextFlashcard()">Volgende &rarr;</button>
+    </div>
+    <div class="flash-empty" id="flash-empty" style="display:none;">
+      <p>Geen zwakke leerdoelen gevonden! Doe eerst een quiz.</p>
+      <button class="btn-primary" onclick="showScreen('config')">Start Quiz</button>
+    </div>
+  </div>
+
+  <!-- Badge celebration overlay -->
+  <div class="badge-overlay" id="badge-overlay" style="display:none;" onclick="closeBadgeOverlay()">
+    <div class="badge-popup">
+      <div class="badge-popup-icon" id="badge-popup-icon"></div>
+      <h2 id="badge-popup-title"></h2>
+      <p id="badge-popup-desc"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
