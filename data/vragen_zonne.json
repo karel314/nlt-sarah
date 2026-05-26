@@ -5,18 +5,18 @@
   "totaal_vragen": 20,
   "leerdoelen": [
     {
-      "leerdoel_id": 1,
+      "leerdoel_id": 11,
       "leerdoel_titel": "Onderdelen van een zonne-energiesysteem",
       "paragraaf": "6.1-6.4",
       "uitleg_tekst": "Een zonne-energiesysteem bestaat uit een zonnepaneel (dat zonlicht omzet in elektriciteit), eventueel een ladingsregelaar, een batterij en een motor of andere belasting. Zonnecellen heten ook wel photovoltaïsche cellen (PV-cellen). Meerdere PV-cellen in serie vormen een PV-paneel. Een zonnecel werkt doordat een silicium halfgeleider aan één kant fosfor bevat (extra elektron, negatieve zijde) en aan de andere kant borium (gat, positieve zijde). Licht bestaat uit fotonen (licht-quanta), waarbij blauw licht meer energie heeft dan rood licht.",
       "subdoelen": [
         {
-          "subdoel_id": "1.1",
+          "subdoel_id": "11.1",
           "subdoel_titel": "Systeemschema en onderdelen",
           "uitleg_tekst": "Het standaard schema van een zonne-energiesysteem is: zonnepaneel → ladingsregelaar → batterij → motor/belasting. Elk onderdeel heeft een specifieke functie: het zonnepaneel wekt stroom op, de ladingsregelaar beschermt de batterij tegen overladen, de batterij slaat energie op, en de motor/belasting verbruikt de energie.",
           "vragen": [
             {
-              "id": 1,
+              "id": 66,
               "type": "volgorde",
               "vraag": "Zet de onderdelen van een zonne-energiesysteem in de juiste volgorde van bron naar verbruiker.",
               "opties": {
@@ -29,7 +29,7 @@
               "uitleg": "De volgorde is: zonnepaneel → ladingsregelaar → batterij → motor/belasting. Het zonnepaneel vangt het zonlicht op en wekt elektriciteit op. De ladingsregelaar regelt de stroom naar de batterij. De batterij slaat de energie op. De motor of belasting verbruikt de energie."
             },
             {
-              "id": 2,
+              "id": 67,
               "type": "multiple_choice",
               "vraag": "Wat is een andere naam voor zonnecellen?",
               "opties": [
@@ -42,7 +42,7 @@
               "uitleg": "Zonnecellen worden ook wel photovoltaïsche cellen of PV-cellen genoemd. 'Photo' verwijst naar licht en 'voltaïsch' naar elektrische spanning. Ze zetten licht direct om in elektriciteit, in tegenstelling tot thermische cellen die warmte gebruiken."
             },
             {
-              "id": 3,
+              "id": 68,
               "type": "invullen",
               "vraag": "Meerdere PV-cellen die in serie geschakeld zijn vormen samen een PV-...",
               "juiste_antwoord": "paneel",
@@ -51,12 +51,12 @@
           ]
         },
         {
-          "subdoel_id": "1.2",
+          "subdoel_id": "11.2",
           "subdoel_titel": "Werking van een zonnecel",
           "uitleg_tekst": "Een zonnecel is gemaakt van silicium, een halfgeleider. Aan de ene kant is fosfor toegevoegd (dit geeft een extra elektron, de negatieve zijde). Aan de andere kant is borium toegevoegd (dit creëert een 'gat', de positieve zijde). Wanneer licht (fotonen) op de cel valt, worden elektronen losgemaakt en ontstaat er een elektrische stroom.",
           "vragen": [
             {
-              "id": 4,
+              "id": 69,
               "type": "multiple_choice",
               "vraag": "Welk materiaal vormt de basis van de meeste zonnecellen?",
               "opties": [
@@ -69,7 +69,7 @@
               "uitleg": "Silicium is een halfgeleider en vormt de basis van de meeste zonnecellen. Door toevoeging van fosfor (negatieve zijde) en borium (positieve zijde) kan silicium zonlicht omzetten in elektriciteit."
             },
             {
-              "id": 5,
+              "id": 70,
               "type": "choose_all_that_apply",
               "vraag": "Welke stoffen worden aan silicium toegevoegd om een zonnecel te maken?",
               "opties": [
@@ -78,11 +78,14 @@
                 "Borium",
                 "Zink"
               ],
-              "juiste_antwoorden": [0, 2],
+              "juiste_antwoorden": [
+                0,
+                2
+              ],
               "uitleg": "Aan silicium worden fosfor en borium toegevoegd. Fosfor heeft een extra elektron en vormt de negatieve zijde (n-type). Borium heeft een 'gat' (ontbrekend elektron) en vormt de positieve zijde (p-type). Samen zorgen ze ervoor dat er stroom kan vloeien wanneer licht op de cel valt."
             },
             {
-              "id": 6,
+              "id": 71,
               "type": "multiple_choice",
               "vraag": "Licht met welke kleur heeft de meeste energie per foton?",
               "opties": [
@@ -99,18 +102,18 @@
       ]
     },
     {
-      "leerdoel_id": 2,
+      "leerdoel_id": 12,
       "leerdoel_titel": "I-V curve en Maximum Power Point",
       "paragraaf": "6.3",
       "uitleg_tekst": "De I-V curve is een grafiek die de relatie toont tussen de stroom (I) en de spanning (V) van een zonnepaneel. Op de x-as staat de spanning en op de y-as de stroom. Twee belangrijke punten zijn Isc (kortsluitstroom: de maximale stroom bij spanning = 0) en Voc (open circuit spanning: de spanning als er geen stroom loopt). Het Maximum Power Point (Pm) is het punt op de curve waar het vermogen P = I × V maximaal is. Belangrijk: zonnepanelen kunnen WEL tegen kortsluiting, maar accu's en batterijen NIET.",
       "subdoelen": [
         {
-          "subdoel_id": "2.1",
+          "subdoel_id": "12.1",
           "subdoel_titel": "De I-V curve lezen en begrijpen",
           "uitleg_tekst": "De I-V curve laat zien hoe stroom en spanning van een zonnepaneel zich tot elkaar verhouden. Bij kortsluiting (V=0) is de stroom maximaal (Isc). Bij open circuit (I=0) is de spanning maximaal (Voc). Het vermogen P = I × V is ergens tussen deze twee uitersten maximaal: dat is het Maximum Power Point.",
           "vragen": [
             {
-              "id": 7,
+              "id": 72,
               "type": "multiple_choice",
               "vraag": "Wat staat er op de x-as en de y-as van een I-V curve van een zonnepaneel?",
               "opties": [
@@ -123,36 +126,36 @@
               "uitleg": "Bij een I-V curve staat de spanning (V) op de x-as en de stroom (I) op de y-as. Ondanks dat de grafiek 'I-V curve' heet, is het gebruikelijk om V op de horizontale as te zetten en I op de verticale as."
             },
             {
-              "id": 8,
+              "id": 73,
               "type": "invullen",
               "vraag": "De maximale stroom van een zonnepaneel bij een spanning van 0 volt heet de ... (afkorting Isc).",
               "juiste_antwoord": "kortsluitstroom",
               "uitleg": "Isc staat voor 'short circuit current', oftewel de kortsluitstroom. Dit is de maximale stroom die een zonnepaneel kan leveren, gemeten als de twee polen direct met elkaar verbonden (kortgesloten) zijn, dus bij V = 0."
             },
             {
-              "id": 9,
+              "id": 74,
               "type": "multiple_choice",
               "vraag": "Wat is het Maximum Power Point (Pm) van een zonnepaneel?",
               "opties": [
                 "Het punt waar de spanning maximaal is",
                 "Het punt waar de stroom maximaal is",
                 "Het punt op de I-V curve waar het vermogen P = I × V het grootst is",
-                "Het punt waar het paneel het meeste zonlicht ontvangt"
+                "Het punt waar het paneel het meeste zonlicht ontvangt, maar dat klopt niet"
               ],
               "juiste_antwoord": 2,
               "uitleg": "Het Maximum Power Point (Pm) is het punt op de I-V curve waar het product van stroom en spanning (P = I × V) maximaal is. Dit punt ligt niet bij Isc (daar is V=0, dus P=0) en ook niet bij Voc (daar is I=0, dus P=0), maar ergens ertussenin."
             },
             {
-              "id": 10,
+              "id": 75,
               "type": "multiple_choice",
               "vraag": "Een leerling sluit per ongeluk de polen van een zonnepaneel direct op elkaar (kortsluiting). Wat gebeurt er?",
               "opties": [
-                "Het zonnepaneel raakt beschadigd en kan kapotgaan",
-                "Het zonnepaneel kan hier goed tegen; er loopt wel maximale stroom maar het paneel raakt niet beschadigd",
                 "Er gebeurt niets, er loopt geen stroom",
-                "Het zonnepaneel ontploft door oververhitting"
+                "Het zonnepaneel raakt beschadigd en kan kapotgaan, maar dit is geen correcte verklaring voor dit verschijnsel",
+                "Het zonnepaneel ontploft door oververhitting",
+                "Het zonnepaneel kan hier goed tegen; er loopt wel maximale stroom maar het paneel raakt niet beschadigd"
               ],
-              "juiste_antwoord": 1,
+              "juiste_antwoord": 3,
               "uitleg": "Zonnepanelen kunnen goed tegen kortsluiting. Er loopt dan wel de maximale stroom (Isc), maar het paneel raakt niet beschadigd. Dit is anders dan bij accu's en batterijen: die kunnen WEL beschadigd raken door kortsluiting omdat ze veel warmte produceren."
             }
           ]
@@ -160,18 +163,18 @@
       ]
     },
     {
-      "leerdoel_id": 3,
+      "leerdoel_id": 13,
       "leerdoel_titel": "Soorten zonnecellen en rendement",
       "paragraaf": "6.5",
       "uitleg_tekst": "Er zijn twee hoofdtypen zonnecellen: kristallijne cellen en amorfe cellen. Kristallijne cellen zijn gemaakt van siliciumkristallen, zijn een vast materiaal, hebben een rendement van ~15% en zijn duurder en arbeidsintensiever om te maken. Amorfe cellen worden vloeibaar op een glasplaat gespoten, zijn flexibel, hebben een lager rendement van ~9%, maar zijn goedkoper. Thin Film cellen zijn vaak amorfe cellen. Het rendement wordt gemeten onder standaard testcondities: 1000 W/m², 25°C en luchtmassa 1.5.",
       "subdoelen": [
         {
-          "subdoel_id": "3.1",
+          "subdoel_id": "13.1",
           "subdoel_titel": "Kristallijn vs. amorf",
           "uitleg_tekst": "Kristallijne zonnecellen zijn gemaakt van vaste siliciumkristallen en hebben een hoger rendement (~15%) maar zijn duurder. Amorfe zonnecellen worden vloeibaar op een glasplaat gespoten, zijn flexibel en goedkoper, maar hebben een lager rendogen (~9%). Thin Film cellen zijn meestal amorfe cellen.",
           "vragen": [
             {
-              "id": 11,
+              "id": 76,
               "type": "choose_all_that_apply",
               "vraag": "Welke uitspraken zijn juist over kristallijne zonnecellen?",
               "opties": [
@@ -181,11 +184,15 @@
                 "Ze zijn flexibel en buigbaar",
                 "De productie is arbeidsintensief"
               ],
-              "juiste_antwoorden": [0, 2, 4],
+              "juiste_antwoorden": [
+                0,
+                2,
+                4
+              ],
               "uitleg": "Kristallijne zonnecellen zijn gemaakt van siliciumkristallen (vast materiaal), hebben een rendement van ~15% en zijn arbeidsintensiever (en dus duurder) om te produceren. Ze zijn NIET goedkoper dan amorfe cellen (ze zijn juist duurder) en ze zijn NIET flexibel (dat zijn amorfe cellen)."
             },
             {
-              "id": 12,
+              "id": 77,
               "type": "multiple_choice",
               "vraag": "Wat is een ander woord voor amorfe zonnecellen die als dunne laag worden aangebracht?",
               "opties": [
@@ -198,16 +205,16 @@
               "uitleg": "Thin Film cellen zijn meestal amorfe zonnecellen. 'Thin Film' (dunne film) verwijst naar de dunne laag materiaal die op een glasplaat of ander substraat wordt gespoten. Ze zijn flexibel en goedkoper, maar hebben een lager rendement (~9%) dan kristallijne cellen (~15%)."
             },
             {
-              "id": 13,
+              "id": 78,
               "type": "multiple_choice",
               "vraag": "Onder welke standaard testcondities wordt het rendement van zonnecellen gemeten?",
               "opties": [
-                "500 W/m², 20°C, luchtmassa 1.0",
                 "1000 W/m², 25°C, luchtmassa 1.5",
                 "1350 W/m², 30°C, luchtmassa 2.0",
+                "500 W/m², 20°C, luchtmassa 1.0",
                 "800 W/m², 25°C, luchtmassa 1.0"
               ],
-              "juiste_antwoord": 1,
+              "juiste_antwoord": 0,
               "uitleg": "De standaard testcondities (STC) voor zonnecellen zijn: een instraling van 1000 W/m², een celtemperatuur van 25°C en een luchtmassa van 1.5. Deze gestandaardiseerde condities zorgen ervoor dat de prestaties van verschillende zonnecellen eerlijk vergeleken kunnen worden."
             }
           ]
@@ -215,18 +222,18 @@
       ]
     },
     {
-      "leerdoel_id": 4,
+      "leerdoel_id": 14,
       "leerdoel_titel": "Schema's, meetinstrumenten en zonnestraling",
       "paragraaf": "6.2",
       "uitleg_tekst": "Bij het meten aan zonnepanelen gebruik je een ampèremeter (meet stroom, in serie aansluiten, lage interne weerstand) en een voltmeter (meet spanning, parallel aansluiten, hoge interne weerstand). Vermogen P = I × V. De zonneconstante is 1350 W/m² (buiten de atmosfeer). Door reflectie (albedo ~30%) en de atmosfeer komt er op het aardoppervlak bij de evenaar ~1000 W/m² aan. In Nederland is het gemiddeld slechts ~110 W/m². Piekuren geven het equivalent aantal uren aan bij 1000 W/m². Er is directe straling (rechte lijn van zon) en diffuse straling (verstrooid door wolken/atmosfeer).",
       "subdoelen": [
         {
-          "subdoel_id": "4.1",
+          "subdoel_id": "14.1",
           "subdoel_titel": "Meetinstrumenten correct aansluiten",
           "uitleg_tekst": "Een ampèremeter meet de stroomsterkte en wordt altijd IN SERIE aangesloten in de stroomkring. Een ampèremeter heeft een lage interne weerstand zodat hij de stroom zo min mogelijk beïnvloedt. Een voltmeter meet de spanning en wordt altijd PARALLEL aangesloten over het onderdeel waarvan je de spanning wilt meten. Een voltmeter heeft een hoge interne weerstand zodat er zo min mogelijk stroom door de meter zelf loopt.",
           "vragen": [
             {
-              "id": 14,
+              "id": 79,
               "type": "multiple_choice",
               "vraag": "Hoe sluit je een ampèremeter aan in een stroomkring?",
               "opties": [
@@ -239,14 +246,14 @@
               "uitleg": "Een ampèremeter meet de stroomsterkte en moet IN SERIE worden aangesloten, zodat alle stroom door de meter loopt. De meter heeft een LAGE interne weerstand om de stroom in het circuit zo min mogelijk te beïnvloeden. Een voltmeter werkt precies andersom: parallel met hoge interne weerstand."
             },
             {
-              "id": 15,
+              "id": 80,
               "type": "invullen",
               "vraag": "Een voltmeter wordt altijd ... aangesloten over het onderdeel waarvan je de spanning wilt meten.",
               "juiste_antwoord": "parallel",
               "uitleg": "Een voltmeter wordt altijd parallel aangesloten. Dit betekent dat de voltmeter naast het onderdeel wordt geplaatst, niet in de stroomkring zelf. De voltmeter heeft een hoge interne weerstand zodat er vrijwel geen stroom door de meter loopt en de meting nauwkeurig is."
             },
             {
-              "id": 16,
+              "id": 81,
               "type": "multiple_choice",
               "vraag": "Met welke formule bereken je het elektrisch vermogen?",
               "opties": [
@@ -261,28 +268,28 @@
           ]
         },
         {
-          "subdoel_id": "4.2",
+          "subdoel_id": "14.2",
           "subdoel_titel": "Zonnestraling en energiecijfers",
           "uitleg_tekst": "De zonneconstante is 1350 W/m² (de instraling buiten de atmosfeer). Door de albedo (~30% reflectie) en de atmosfeer wordt dit minder. Bij de evenaar op aardniveau komt ~1000 W/m² aan. In Nederland is het gemiddeld slechts ~110 W/m². Piekuren is het equivalente aantal uren dat de zon op 1000 W/m² zou schijnen. Er is directe straling (recht van de zon) en diffuse straling (verstrooid door wolken en de atmosfeer).",
           "vragen": [
             {
-              "id": 17,
+              "id": 82,
               "type": "invullen",
               "vraag": "De hoeveelheid zonnestraling aan de buitenkant van de atmosfeer is 1350 W/m². Dit noemen we de ...",
               "juiste_antwoord": "zonneconstante",
               "uitleg": "De zonneconstante is de hoeveelheid zonnestraling die per vierkante meter aan de buitenkant van de aardatmosfeer binnenkomt: 1350 W/m². Op het aardoppervlak is dit minder door absorptie in de atmosfeer en reflectie (albedo). Bij de evenaar op aardniveau is dat ~1000 W/m²."
             },
             {
-              "id": 18,
+              "id": 83,
               "type": "multiple_choice",
               "vraag": "De albedo van de aarde is ~30%. Wat betekent dit voor zonne-energie?",
               "opties": [
-                "30% van het zonlicht wordt geabsorbeerd door zonnepanelen",
-                "30% van het zonlicht dat de aarde bereikt wordt teruggekaatst de ruimte in",
+                "30% van het licht is diffuse straling",
                 "30% van de energie wordt opgeslagen in batterijen",
-                "30% van het licht is diffuse straling"
+                "30% van het zonlicht wordt geabsorbeerd door zonnepanelen, maar dat klopt niet",
+                "30% van het zonlicht dat de aarde bereikt wordt teruggekaatst de ruimte in"
               ],
-              "juiste_antwoord": 1,
+              "juiste_antwoord": 3,
               "uitleg": "De albedo van ~30% betekent dat ongeveer 30% van het binnenkomende zonlicht door de aarde (wolken, ijs, oppervlak) wordt teruggekaatst de ruimte in. Hierdoor komt er minder energie op het aardoppervlak aan dan de zonneconstante van 1350 W/m² aangeeft."
             }
           ]
@@ -290,18 +297,18 @@
       ]
     },
     {
-      "leerdoel_id": 5,
+      "leerdoel_id": 15,
       "leerdoel_titel": "Problemen herkennen en experts identificeren",
       "paragraaf": "6.1-6.8",
       "uitleg_tekst": "Als niet-expert hoef je niet alles zelf op te lossen, maar moet je wel problemen kunnen herkennen en weten welke expert je moet inschakelen. Expert D is de specialist op het gebied van zonne-electriciteit. Bij problemen met de opwekking van elektriciteit uit zonlicht, de werking van zonnepanelen, het aansluiten van PV-systemen of het meten van prestaties van zonnecellen, raadpleeg je Expert D.",
       "subdoelen": [
         {
-          "subdoel_id": "5.1",
+          "subdoel_id": "15.1",
           "subdoel_titel": "De juiste expert inschakelen",
           "uitleg_tekst": "Bij NLT-projecten met zonne-energie zijn er verschillende experts. Wanneer een probleem te maken heeft met zonnepanelen, PV-cellen, I-V curves, vermogen van zonnecellen, meetopstellingen met zonnepanelen, of andere zonne-electriciteitsvraagstukken, dan is Expert D (de zonne-electriciteit expert) de juiste persoon om te raadplegen.",
           "vragen": [
             {
-              "id": 19,
+              "id": 84,
               "type": "multiple_choice",
               "vraag": "Een groepje leerlingen merkt dat hun zonnepaneel veel minder stroom levert dan verwacht. De I-V curve ziet er anders uit dan in het boek. Welke expert moeten ze raadplegen?",
               "opties": [
@@ -314,7 +321,7 @@
               "uitleg": "Dit is een probleem met de prestaties van een zonnepaneel en de I-V curve. Dit valt onder zonne-electriciteit, dus Expert D is de juiste expert om te raadplegen. Expert D heeft de diepgaande kennis over het gedrag van zonnecellen en kan analyseren waarom het paneel minder presteert."
             },
             {
-              "id": 20,
+              "id": 85,
               "type": "choose_all_that_apply",
               "vraag": "Bij welke van de volgende problemen zou je Expert D (zonne-electriciteit) inschakelen?",
               "opties": [
@@ -324,7 +331,11 @@
                 "De software voor dataverwerking crasht",
                 "Het rendement van het zonnepaneel is lager dan de specificaties"
               ],
-              "juiste_antwoorden": [0, 2, 4],
+              "juiste_antwoorden": [
+                0,
+                2,
+                4
+              ],
               "uitleg": "Expert D (zonne-electriciteit) raadpleeg je bij problemen die te maken hebben met het zonne-energiesysteem: de batterij die niet goed oplaadt via het zonnepaneel, een onverwacht lage stroomwaarde bij het zonnepaneel, en een afwijkend rendement van het zonnepaneel. De windturbine valt onder een andere expert, en softwareproblemen zijn voor Expert C (informatica)."
             }
           ]
