@@ -4,6 +4,7 @@
 // ── State ──
 let CONFIG = null;
 let db = null;
+let allDbs = [];
 let allQuestions = [];
 let quizQuestions = [];
 let currentIndex = 0;
@@ -41,9 +42,13 @@ function applyTheme(theme) {
 
 async function init() {
   try {
-    const dataFile = (CONFIG.dataFiles && CONFIG.dataFiles[0]) || 'data/vragen.json';
-    const resp = await fetch(dataFile);
-    db = await resp.json();
+    const dataFiles = (CONFIG.dataFiles && CONFIG.dataFiles.length > 0) ? CONFIG.dataFiles : ['data/vragen.json'];
+    allDbs = [];
+    for (const file of dataFiles) {
+      const resp = await fetch(file);
+      allDbs.push(await resp.json());
+    }
+    db = { leerdoelen: allDbs.flatMap(d => d.leerdoelen) };
     flattenQuestions();
     setupConfigScreen();
     updateBadgeShelf();
@@ -143,6 +148,63 @@ function showScreen(name) {
 
 // ── Config screen ──
 function setupConfigScreen() {
+  const chapterContainer = document.getElementById('chapter-filter');
+  if (chapterContainer) {
+    chapterContainer.innerHTML = '';
+    if (allDbs.length > 1) {
+      document.getElementById('chapter-filter-section').style.display = '';
+      allDbs.forEach((d, i) => {
+        const label = d.hoofdstuk || ('Hoofdstuk ' + (i + 1));
+        const row = document.createElement('div');
+        row.className = 'chapter-cb checked';
+        row.dataset.chapterIndex = i;
+        row.innerHTML = `
+          <input type="checkbox" checked>
+          <span class="leerdoel-cb-check">&#10003;</span>
+          <span class="leerdoel-cb-text">${label}</span>
+        `;
+        const cb = row.querySelector('input');
+        row.addEventListener('click', () => {
+          cb.checked = !cb.checked;
+          row.classList.toggle('checked', cb.checked);
+          filterLeerdoelenByChapter();
+        });
+        chapterContainer.appendChild(row);
+      });
+    } else {
+      document.getElementById('chapter-filter-section').style.display = 'none';
+    }
+  }
+  renderLeerdoelFilter();
+}
+
+function getChapterLeerdoelIds(chapterIndex) {
+  return allDbs[chapterIndex].leerdoelen.map(ld => ld.leerdoel_id);
+}
+
+function filterLeerdoelenByChapter() {
+  const activeIds = new Set();
+  document.querySelectorAll('#chapter-filter .chapter-cb').forEach(row => {
+    const cb = row.querySelector('input');
+    const idx = parseInt(row.dataset.chapterIndex);
+    if (cb.checked) {
+      for (const id of getChapterLeerdoelIds(idx)) activeIds.add(id);
+    }
+  });
+  document.querySelectorAll('#leerdoel-filter .leerdoel-cb').forEach(row => {
+    const cb = row.querySelector('input');
+    const ldId = parseInt(cb.value);
+    if (activeIds.has(ldId)) {
+      row.style.display = '';
+    } else {
+      row.style.display = 'none';
+      cb.checked = false;
+      row.classList.remove('checked');
+    }
+  });
+}
+
+function renderLeerdoelFilter() {
   const container = document.getElementById('leerdoel-filter');
   container.innerHTML = '';
   for (const ld of db.leerdoelen) {
@@ -165,7 +227,11 @@ function setupConfigScreen() {
 // ── Start quiz ──
 function startQuiz() {
   const checked = [...document.querySelectorAll('#leerdoel-filter input:checked')].map(cb => parseInt(cb.value));
-  selectedLeerdoelen = checked.length > 0 ? checked : db.leerdoelen.map(ld => ld.leerdoel_id);
+  const visibleLeerdoelen = [...document.querySelectorAll('#leerdoel-filter .leerdoel-cb')]
+    .filter(row => row.style.display !== 'none')
+    .map(row => parseInt(row.querySelector('input').value));
+  const selectedPool = checked.length > 0 ? checked : visibleLeerdoelen;
+  selectedLeerdoelen = selectedPool.length > 0 ? selectedPool : db.leerdoelen.map(ld => ld.leerdoel_id);
 
   const pool = allQuestions.filter(q => selectedLeerdoelen.includes(q.leerdoel_id));
   const scored = pool.map(q => ({ q, priority: getQuestionPriority(q.id), rand: Math.random() }));
